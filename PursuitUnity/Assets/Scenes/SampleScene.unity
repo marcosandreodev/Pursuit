@@ -169,6 +169,7 @@ GameObject:
   - component: {fileID: 489360340}
   - component: {fileID: 489360342}
   - component: {fileID: 489360343}
+  - component: {fileID: 489360344}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -186,7 +187,7 @@ Animator:
   m_GameObject: {fileID: 489360335}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: eb87b276da625b94aaa6d4821172b36c, type: 2}
+  m_Controller: {fileID: 9100000, guid: 7926c386589d874428c4f91a1a23fc15, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -256,7 +257,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 489360335}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.5, y: -4.22, z: 0}
+  m_LocalPosition: {x: -9.34, y: -4.22, z: 0}
   m_LocalScale: {x: 3.0676486, y: 3.0676486, z: 3.0676486}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -324,16 +325,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffe61a2197b210d4bab08ae92c24c985, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5.06
-  jumpSpeed: 6
+  rifleBool: 0
+  rifle: {fileID: 0}
+  PlayerRifle: {fileID: 0}
+  moveSpeed: 5
+  jumpSpeed: 20
   ghostJump: 0
   isGrounded: 0
-  feetPosition: {fileID: 345635016}
-  sizeCapsule: {x: 1.1, y: 0.19}
+  feetPosition: {fileID: 0}
+  sizeCapsule: {x: 0, y: 0}
   angleCapsule: 0
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 0
 --- !u!70 &489360343
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -350,6 +354,31 @@ CapsuleCollider2D:
   m_Offset: {x: -0.007, y: -0.245}
   m_Size: {x: 0.11, y: 0.01}
   m_Direction: 1
+--- !u!114 &489360344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 489360335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffe61a2197b210d4bab08ae92c24c985, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rifleBool: 0
+  rifle: {fileID: 0}
+  PlayerRifle: {fileID: 0}
+  moveSpeed: 5
+  jumpSpeed: 20
+  ghostJump: 0
+  isGrounded: 0
+  feetPosition: {fileID: 345635016}
+  sizeCapsule: {x: 0.09, y: 0.45}
+  angleCapsule: 0
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1048,9 +1077,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1821291845}
   - component: {fileID: 1821291844}
+  - component: {fileID: 1821291846}
   m_Layer: 6
-  m_Name: Rifle_0
-  m_TagString: Untagged
+  m_Name: Rifle
+  m_TagString: Rifle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1114,14 +1144,40 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1821291843}
-  m_LocalRotation: {x: -0, y: -0, z: 0.017461859, w: 0.99984753}
+  m_LocalRotation: {x: -0, y: -0, z: -0.012280295, w: 0.99992466}
   m_LocalPosition: {x: -7.02, y: -5.35, z: 0}
   m_LocalScale: {x: 3.3136, y: 3.3136, z: 3.3136}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 2.001}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -1.407}
+--- !u!61 &1821291846
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1821291843}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.12, y: -0.08}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.09, y: 0.33}
+  m_EdgeRadius: 0
 --- !u!1 &1869949857
 GameObject:
   m_ObjectHideFlags: 0

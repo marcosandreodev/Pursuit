@@ -2,9 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerNoGuns : MonoBehaviour
 {
     private float move;
+    [SerializeField] private bool rifleBool = false;
+    [SerializeField] private Transform rifle;
+    [SerializeField] private GameObject PlayerRifle;
+
     [SerializeField] private float moveSpeed = 5f;
     private bool jumping;
     [SerializeField] private float jumpSpeed = 20f;
@@ -99,45 +103,56 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Reconhecer o chão
-
-        isGrounded= Physics2D.OverlapCapsule(feetPosition.position, sizeCapsule, CapsuleDirection2D.Horizontal, angleCapsule, whatIsGround);
-
-        move = Input.GetAxis("Horizontal");
-
-        //input do pulo do personagem
-
-        if (Input.GetButtonDown("Jump") && ghostJump >0)
+        if (rifleBool == false)
         {
-            jumping=true; 
-        }
+            //Reconhecer o chão
 
-        // inverter posição boneco
-        if(move < 0)
-        {
-            sprite.flipX= true;
-        }
-        else if(move > 0)
-        {
-            sprite.flipX= false;
-        }
+            isGrounded = Physics2D.OverlapCapsule(feetPosition.position, sizeCapsule, CapsuleDirection2D.Horizontal, angleCapsule, whatIsGround);
+
+            move = Input.GetAxis("Horizontal");
+
+            //input do pulo do personagem
+
+            if (Input.GetButtonDown("Jump") && ghostJump > 0)
+            {
+                jumping = true;
+            }
+
+            // inverter posição boneco
+            if (move < 0)
+            {
+                sprite.flipX = true;
+            }
+            else if (move > 0)
+            {
+                sprite.flipX = false;
+            }
 
 
-        //Animação boneco
+            //Animação boneco
 
-        if (isGrounded)
-        {
-            ghostJump = 0.2f;
-            walking();
+            if (isGrounded)
+            {
+                ghostJump = 0.2f;
+                walking();
+            }
+            else
+            {
+                ghostJump -= Time.deltaTime;
+                if (ghostJump <= 0)
+                {
+                    ghostJump = 0;
+                }
+                jump();
+            }
         }
         else
         {
-            ghostJump-=Time.deltaTime; 
-            if (ghostJump <= 0 ) {
-                ghostJump = 0;
-            }
-            jump();
+            animationPlayer.SetBool("Walking", false);
+            animationPlayer.SetBool("PickRifle", true);
         }
+
+
     }
 
     /*private void OnDrawGizmosSelected()
@@ -148,14 +163,40 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        //andar
-        rb.velocity= new Vector2(move * moveSpeed, rb.velocity.y);
-        //pulo
-        if (jumping)
+        if (rifleBool == false)
         {
-            rb.velocity = Vector2.up * jumpSpeed;
+            //andar
+            rb.velocity = new Vector2(move * moveSpeed, rb.velocity.y);
+            //pulo
+            if (jumping)
+            {
+                rb.velocity = Vector2.up * jumpSpeed;
 
-            jumping= false;
+                jumping = false;
+            }
         }
+    }
+
+    private void OnTriggerStay2D(Collider2D coll)
+    {
+        if (coll.gameObject.tag == "Rifle" && isGrounded)
+        {
+            rifleBool = true;
+            sprite.flipX = false;
+            rb.constraints = RigidbodyConstraints2D.FreezePosition;
+            rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+            transform.position = rifle.position;
+        }
+    }
+
+    void DestroyRifle()
+    {
+        Destroy(rifle.gameObject);
+    }
+
+    void DestroyPlayer()
+    {
+        Instantiate(PlayerRifle, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
+        Destroy(gameObject);
     }
 }
