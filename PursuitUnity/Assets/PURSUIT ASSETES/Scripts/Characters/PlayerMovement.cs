@@ -9,6 +9,8 @@ public class PlayerMovement : MonoBehaviour
     private bool jumping;
     [SerializeField] private float jumpSpeed = 6f;
 
+    [SerializeField] private float ghostJump;
+
     [SerializeField] private bool isGrounded;
     public Transform feetPosition;
     public float sizeRadius;
@@ -100,7 +102,7 @@ public class PlayerMovement : MonoBehaviour
 
         //input do pulo do personagem
 
-        if (Input.GetButtonDown("Jump") && isGrounded)
+        if (Input.GetButtonDown("Jump") && ghostJump >0)
         {
             jumping=true; 
         }
@@ -120,12 +122,23 @@ public class PlayerMovement : MonoBehaviour
 
         if (isGrounded)
         {
+            ghostJump = 0.2f;
             walking();
         }
         else
         {
+            ghostJump-=Time.deltaTime; 
+            if (ghostJump <= 0 ) {
+                ghostJump = 0;
+            }
             jump();
         }
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(feetPosition.position, sizeRadius);
     }
 
     void FixedUpdate()
