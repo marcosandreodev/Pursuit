@@ -7,13 +7,14 @@ public class PlayerMovement : MonoBehaviour
     private float move;
     [SerializeField] private float moveSpeed = 5f;
     private bool jumping;
-    [SerializeField] private float jumpSpeed = 6f;
+    [SerializeField] private float jumpSpeed = 20f;
 
     [SerializeField] private float ghostJump;
 
     [SerializeField] private bool isGrounded;
     public Transform feetPosition;
-    public float sizeRadius;
+    public Vector2 sizeCapsule;
+    [SerializeField] private float angleCapsule;
     public LayerMask whatIsGround;
 
 
@@ -26,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (isGrounded)
         {
+            animationPlayer.SetBool("Walking", false);
             animationPlayer.SetBool("JumpingV", false);
             animationPlayer.SetBool("JumpingH", false);
             animationPlayer.SetBool("FallingV", false);
@@ -65,7 +67,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            if (rb.velocity.y > 0)
+            if (rb.velocity.y > 0 && rb.velocity.x != 0)
             {
                 animationPlayer.SetBool("JumpingV", false);
                 animationPlayer.SetBool("JumpingH", true);
@@ -89,6 +91,9 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
         animationPlayer = GetComponent<Animator>();
+
+        sizeCapsule = new Vector2(0.09f, 0.19f);
+        angleCapsule = -90f;
     }
 
     // Update is called once per frame
@@ -96,7 +101,7 @@ public class PlayerMovement : MonoBehaviour
     {
         //Reconhecer o chão
 
-        isGrounded= Physics2D.OverlapCircle(feetPosition.position,sizeRadius,whatIsGround);
+        isGrounded= Physics2D.OverlapCapsule(feetPosition.position, sizeCapsule, CapsuleDirection2D.Horizontal, angleCapsule, whatIsGround);
 
         move = Input.GetAxis("Horizontal");
 
@@ -135,11 +140,11 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void OnDrawGizmosSelected()
+    /*private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(feetPosition.position, sizeRadius);
-    }
+        Gizmos.DrawWireSphere(feetPosition.position, sizeCapsule);
+    }*/
 
     void FixedUpdate()
     {
