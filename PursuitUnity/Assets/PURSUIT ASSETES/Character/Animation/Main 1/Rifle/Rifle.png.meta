@@ -1,0 +1,1113 @@
+fileFormatVersion: 2
+guid: deeb1811b9cb86e4d8075309ee481384
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "Movimenta\xE7\xE3o sem arma e com AR-Sheet_0"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44f72838482469b4d857ac823dd152ad
+      internalID: -1894648374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Movimenta\xE7\xE3o sem arma e com AR-Sheet_1"
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76f5ef2ddd4bc4c4cb292a6507137c1c
+      internalID: -1410025190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Movimenta\xE7\xE3o sem arma e com AR-Sheet_2"
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 791df024242b430498e3ab2d08562e58
+      internalID: -111218132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Movimenta\xE7\xE3o sem arma e com AR-Sheet_3"
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edf4a3f0e5da13740b0db241bdb4deab
+      internalID: -1731403213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Movimenta\xE7\xE3o sem arma e com AR-Sheet_4"
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d40a1179b0bd4d54f9bd9b4aefa82e4a
+      internalID: -1927958945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Movimenta\xE7\xE3o sem arma e com AR-Sheet_5"
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3c5b6b1cf8bfe645ac9ee7f3f066a1e
+      internalID: -1192073955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Movimenta\xE7\xE3o sem arma e com AR-Sheet_6"
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8497b784e0e05a41bb058785b4ed321
+      internalID: -1792274317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Movimenta\xE7\xE3o sem arma e com AR-Sheet_7"
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86fb571628c18e240949139ea390713d
+      internalID: 57229200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Movimenta\xE7\xE3o sem arma e com AR-Sheet_8"
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b338e41b7446caa459cd1ebdddf2e034
+      internalID: 723271860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Movimenta\xE7\xE3o sem arma e com AR-Sheet_9"
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c766c9a91ac989488206b75d2ef3f10
+      internalID: 111155037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Movimenta\xE7\xE3o sem arma e com AR-Sheet_10"
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 668c501772ecac14a9a9351aabdd4d67
+      internalID: -484076903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Movimenta\xE7\xE3o sem arma e com AR-Sheet_11"
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2de2af3ff30ad364f8eb97b160a1711a
+      internalID: 2106783488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Movimenta\xE7\xE3o sem arma e com AR-Sheet_12"
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db5f399436810a2429758694f25af8df
+      internalID: 1959618831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Movimenta\xE7\xE3o sem arma e com AR-Sheet_13"
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecb2e6e77eed36e48a8e88189868a00f
+      internalID: -28996616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Movimenta\xE7\xE3o sem arma e com AR-Sheet_14"
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 361918c549ed8474c817ec99855a4c3a
+      internalID: 118680679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Movimenta\xE7\xE3o sem arma e com AR-Sheet_15"
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48a37708a578e3e4ba6ca9e537479bcc
+      internalID: 397050218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Movimenta\xE7\xE3o sem arma e com AR-Sheet_16"
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e0e26b5a3aea4949931b4a17cb10110
+      internalID: 1796461709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Movimenta\xE7\xE3o sem arma e com AR-Sheet_17"
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e69b19ab56dcc646b7ea7e84a0df651
+      internalID: 1934786980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Movimenta\xE7\xE3o sem arma e com AR-Sheet_18"
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 001408ecd9e740447bf1158edcc80236
+      internalID: 1245961403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Movimenta\xE7\xE3o sem arma e com AR-Sheet_19"
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccdd6c429da6f054190c3993767ebcf0
+      internalID: -1963521801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Movimenta\xE7\xE3o sem arma e com AR-Sheet_20"
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8f34852e8f8c604aaf30802df797860
+      internalID: 1969352765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Movimenta\xE7\xE3o sem arma e com AR-Sheet_21"
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99c026f370c513c4e80df38d4b17c6ec
+      internalID: 1578791536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Movimenta\xE7\xE3o sem arma e com AR-Sheet_22"
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7eed81ba78c1e34b8220b38efaf5c3b
+      internalID: 721598588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Movimenta\xE7\xE3o sem arma e com AR-Sheet_23"
+      rect:
+        serializedVersion: 2
+        x: 1472
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e327431ee18a5af45a3daacb853ce118
+      internalID: 686869377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Movimenta\xE7\xE3o sem arma e com AR-Sheet_24"
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc7bb2a234d8ac14286534e5c6a35f44
+      internalID: 1544559210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Movimenta\xE7\xE3o sem arma e com AR-Sheet_25"
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4c20bd482cc015419a27420b10ee8ec
+      internalID: 1455669482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Movimenta\xE7\xE3o sem arma e com AR-Sheet_26"
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74f691b4ff3aed24ab1329657f415b4a
+      internalID: -64205407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Movimenta\xE7\xE3o sem arma e com AR-Sheet_27"
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80354cb5c0ac3da42a85d0a9fec4293f
+      internalID: 1056509649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Movimenta\xE7\xE3o sem arma e com AR-Sheet_28"
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85c9f40761b1a2240b46f1cf4bf07c26
+      internalID: -2103361446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Movimenta\xE7\xE3o sem arma e com AR-Sheet_29"
+      rect:
+        serializedVersion: 2
+        x: 1856
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 587894cd06877cc459b18bf98f4e68aa
+      internalID: -1258682208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Movimenta\xE7\xE3o sem arma e com AR-Sheet_30"
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f08ea94d99d278b459021eb49a9283e7
+      internalID: 1655665906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Movimenta\xE7\xE3o sem arma e com AR-Sheet_31"
+      rect:
+        serializedVersion: 2
+        x: 1984
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d49c1bff19bcaa45ac00172556fb637
+      internalID: 1854924113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Movimenta\xE7\xE3o sem arma e com AR-Sheet_32"
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6114744189af6743afca3aa1ecd2138
+      internalID: -2097556141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Movimenta\xE7\xE3o sem arma e com AR-Sheet_33"
+      rect:
+        serializedVersion: 2
+        x: 2112
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a234408653dddbb4aba0ffdec8ceca6d
+      internalID: 1797278929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Movimenta\xE7\xE3o sem arma e com AR-Sheet_34"
+      rect:
+        serializedVersion: 2
+        x: 2176
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ad26652c57da21499cda9ad537ce21a
+      internalID: -1713521527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Movimenta\xE7\xE3o sem arma e com AR-Sheet_35"
+      rect:
+        serializedVersion: 2
+        x: 2240
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d7f74a3156f855498f44cc47dcc2c28
+      internalID: 67924130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Movimenta\xE7\xE3o sem arma e com AR-Sheet_36"
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34f98c2c4fbb9f642b2e142ab8ca6979
+      internalID: -1195035382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Movimenta\xE7\xE3o sem arma e com AR-Sheet_37"
+      rect:
+        serializedVersion: 2
+        x: 2368
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc53a72c43540ee48ba50e67f7eb44ac
+      internalID: 957410034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Movimenta\xE7\xE3o sem arma e com AR-Sheet_38"
+      rect:
+        serializedVersion: 2
+        x: 2432
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c42d4f181b64964ab3b168d8d2c2dea
+      internalID: -94291541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Movimenta\xE7\xE3o sem arma e com AR-Sheet_39"
+      rect:
+        serializedVersion: 2
+        x: 2496
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45c81e14bfdda374e8aac0de3770ceb1
+      internalID: 696910186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Movimenta\xE7\xE3o sem arma e com AR-Sheet_40"
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8969a4ad61f44294eb27fc76b1b2f2bb
+      internalID: 726949203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Movimenta\xE7\xE3o sem arma e com AR-Sheet_41"
+      rect:
+        serializedVersion: 2
+        x: 2624
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95939405d8a85de4d94ada755a82ba38
+      internalID: 1041041620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Movimenta\xE7\xE3o sem arma e com AR-Sheet_42"
+      rect:
+        serializedVersion: 2
+        x: 2688
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 603ba618e659398438fa31ded93b16d3
+      internalID: 1582214362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Movimenta\xE7\xE3o sem arma e com AR-Sheet_43"
+      rect:
+        serializedVersion: 2
+        x: 2752
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e4e016f4bd83b0448fe88cc9339fc24
+      internalID: 1351958545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Movimenta\xE7\xE3o sem arma e com AR-Sheet_44"
+      rect:
+        serializedVersion: 2
+        x: 2816
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbb88ed909be4c047b15c0320bf969e8
+      internalID: 1620751722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      "Movimenta\xE7\xE3o sem arma e com AR-Sheet_0": -1894648374
+      "Movimenta\xE7\xE3o sem arma e com AR-Sheet_1": -1410025190
+      "Movimenta\xE7\xE3o sem arma e com AR-Sheet_10": -484076903
+      "Movimenta\xE7\xE3o sem arma e com AR-Sheet_11": 2106783488
+      "Movimenta\xE7\xE3o sem arma e com AR-Sheet_12": 1959618831
+      "Movimenta\xE7\xE3o sem arma e com AR-Sheet_13": -28996616
+      "Movimenta\xE7\xE3o sem arma e com AR-Sheet_14": 118680679
+      "Movimenta\xE7\xE3o sem arma e com AR-Sheet_15": 397050218
+      "Movimenta\xE7\xE3o sem arma e com AR-Sheet_16": 1796461709
+      "Movimenta\xE7\xE3o sem arma e com AR-Sheet_17": 1934786980
+      "Movimenta\xE7\xE3o sem arma e com AR-Sheet_18": 1245961403
+      "Movimenta\xE7\xE3o sem arma e com AR-Sheet_19": -1963521801
+      "Movimenta\xE7\xE3o sem arma e com AR-Sheet_2": -111218132
+      "Movimenta\xE7\xE3o sem arma e com AR-Sheet_20": 1969352765
+      "Movimenta\xE7\xE3o sem arma e com AR-Sheet_21": 1578791536
+      "Movimenta\xE7\xE3o sem arma e com AR-Sheet_22": 721598588
+      "Movimenta\xE7\xE3o sem arma e com AR-Sheet_23": 686869377
+      "Movimenta\xE7\xE3o sem arma e com AR-Sheet_24": 1544559210
+      "Movimenta\xE7\xE3o sem arma e com AR-Sheet_25": 1455669482
+      "Movimenta\xE7\xE3o sem arma e com AR-Sheet_26": -64205407
+      "Movimenta\xE7\xE3o sem arma e com AR-Sheet_27": 1056509649
+      "Movimenta\xE7\xE3o sem arma e com AR-Sheet_28": -2103361446
+      "Movimenta\xE7\xE3o sem arma e com AR-Sheet_29": -1258682208
+      "Movimenta\xE7\xE3o sem arma e com AR-Sheet_3": -1731403213
+      "Movimenta\xE7\xE3o sem arma e com AR-Sheet_30": 1655665906
+      "Movimenta\xE7\xE3o sem arma e com AR-Sheet_31": 1854924113
+      "Movimenta\xE7\xE3o sem arma e com AR-Sheet_32": -2097556141
+      "Movimenta\xE7\xE3o sem arma e com AR-Sheet_33": 1797278929
+      "Movimenta\xE7\xE3o sem arma e com AR-Sheet_34": -1713521527
+      "Movimenta\xE7\xE3o sem arma e com AR-Sheet_35": 67924130
+      "Movimenta\xE7\xE3o sem arma e com AR-Sheet_36": -1195035382
+      "Movimenta\xE7\xE3o sem arma e com AR-Sheet_37": 957410034
+      "Movimenta\xE7\xE3o sem arma e com AR-Sheet_38": -94291541
+      "Movimenta\xE7\xE3o sem arma e com AR-Sheet_39": 696910186
+      "Movimenta\xE7\xE3o sem arma e com AR-Sheet_4": -1927958945
+      "Movimenta\xE7\xE3o sem arma e com AR-Sheet_40": 726949203
+      "Movimenta\xE7\xE3o sem arma e com AR-Sheet_41": 1041041620
+      "Movimenta\xE7\xE3o sem arma e com AR-Sheet_42": 1582214362
+      "Movimenta\xE7\xE3o sem arma e com AR-Sheet_43": 1351958545
+      "Movimenta\xE7\xE3o sem arma e com AR-Sheet_44": 1620751722
+      "Movimenta\xE7\xE3o sem arma e com AR-Sheet_5": -1192073955
+      "Movimenta\xE7\xE3o sem arma e com AR-Sheet_6": -1792274317
+      "Movimenta\xE7\xE3o sem arma e com AR-Sheet_7": 57229200
+      "Movimenta\xE7\xE3o sem arma e com AR-Sheet_8": 723271860
+      "Movimenta\xE7\xE3o sem arma e com AR-Sheet_9": 111155037
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
