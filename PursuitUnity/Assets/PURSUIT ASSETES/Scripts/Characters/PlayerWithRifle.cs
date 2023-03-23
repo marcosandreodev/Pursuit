@@ -5,28 +5,35 @@ using UnityEngine;
 public class PlayerWithRifle : MonoBehaviour
 {
     private float move;
+
     [SerializeField] private float moveSpeed = 5f;
+    [SerializeField] private float runSpeed = 9f;
     private bool jumping;
+    private bool running;
     [SerializeField] private float jumpSpeed = 20f;
 
     [SerializeField] private float ghostJump;
 
     [SerializeField] private bool isGrounded;
+    [SerializeField] private bool isTriggered;
     public Transform feetPosition;
     public Vector2 sizeCapsule;
     [SerializeField] private float angleCapsule;
     public LayerMask whatIsGround;
 
+    public GameObject DisplayMessage;
 
 
     Rigidbody2D rb;
     SpriteRenderer sprite;
     Animator animationPlayer;
 
+
     public void walking()
     {
-        if (isGrounded)
+        if (isGrounded && running == false)
         {
+            animationPlayer.SetBool("Running", false);
             animationPlayer.SetBool("Walking", false);
             animationPlayer.SetBool("JumpingV", false);
             animationPlayer.SetBool("JumpingH", false);
@@ -40,6 +47,28 @@ public class PlayerWithRifle : MonoBehaviour
             else
             {
                 animationPlayer.SetBool("Walking", false);
+            }
+        }
+        if (running == true)
+        {
+            if (isGrounded)
+            {
+                animationPlayer.SetBool("Running", false);
+                animationPlayer.SetBool("Walking", false);
+                animationPlayer.SetBool("JumpingV", false);
+                animationPlayer.SetBool("JumpingH", false);
+                animationPlayer.SetBool("FallingV", false);
+                animationPlayer.SetBool("FallingH", false);
+
+                if (rb.velocity.x != 0 && move != 0)
+                {
+                    animationPlayer.SetBool("Running", true);
+                }
+                else
+                {
+                    animationPlayer.SetBool("Running", false);
+                    animationPlayer.SetBool("Walking", false);
+                }
             }
         }
     }
@@ -92,7 +121,7 @@ public class PlayerWithRifle : MonoBehaviour
         sprite = GetComponent<SpriteRenderer>();
         animationPlayer = GetComponent<Animator>();
 
-        sizeCapsule = new Vector2(0.09f, 0.19f);
+        sizeCapsule = new Vector2(0.42f, 0.3f);
         angleCapsule = -90f;
     }
 
@@ -129,33 +158,58 @@ public class PlayerWithRifle : MonoBehaviour
         {
             ghostJump = 0.2f;
             walking();
+            if (Input.GetKeyDown(KeyCode.LeftShift))
+            {
+                running = true;
+
+            }
+            if (Input.GetKeyUp(KeyCode.LeftShift))
+            {
+                running = false;
+            }
+
         }
         else
         {
-            ghostJump-=Time.deltaTime; 
-            if (ghostJump <= 0 ) {
+            ghostJump -= Time.deltaTime;
+            if (ghostJump <= 0)
+            {
                 ghostJump = 0;
+            }
+            if (Input.GetKeyDown(KeyCode.LeftShift) && rb.velocity.y == 0)
+            {
+                running = true;
+            }
+            if (Input.GetKeyUp(KeyCode.LeftShift) && rb.velocity.y != 0)
+            {
+                running = false;
             }
             jump();
         }
     }
 
-    /*private void OnDrawGizmosSelected()
+    private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(feetPosition.position, sizeCapsule);
-    }*/
+        Gizmos.DrawWireCube(feetPosition.position, sizeCapsule);
+    }
 
     void FixedUpdate()
     {
         //andar
-        rb.velocity= new Vector2(move * moveSpeed, rb.velocity.y);
+        rb.velocity = new Vector2(move * moveSpeed, rb.velocity.y);
         //pulo
+
+        if (running)
+        {
+            rb.velocity = new Vector2(move * runSpeed, rb.velocity.y);
+        }
+
         if (jumping)
         {
             rb.velocity = Vector2.up * jumpSpeed;
 
-            jumping= false;
+            jumping = false;
         }
     }
 }
