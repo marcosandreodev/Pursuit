@@ -12,11 +12,11 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Transform rifle;
     [SerializeField] private GameObject PlayerRifle;
 
-    [SerializeField] private float moveSpeed = 5f;
-    [SerializeField] private float runSpeed = 9f;
+    [SerializeField] private float moveSpeed = 2f;
+    [SerializeField] private float runSpeed = 5f;
     private bool jumping;
     private bool running;
-    [SerializeField] private float jumpSpeed = 20f;
+    [SerializeField] private float jumpSpeed = 7f;
 
     [SerializeField] private float ghostJump;
 
@@ -26,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
     public Vector2 sizeCapsule;
     [SerializeField] private float angleCapsule;
     public LayerMask whatIsGround;
+    bool facingRight = true;
 
     public GameObject DisplayMessage;
   
@@ -128,7 +129,7 @@ public class PlayerMovement : MonoBehaviour
         sprite = GetComponent<SpriteRenderer>();
         animationPlayer = GetComponent<Animator>();
 
-        sizeCapsule = new Vector2(0.42f, 0.3f);
+        sizeCapsule = new Vector2(0.13f, -0.04f);
         angleCapsule = -90f;
     }
 
@@ -151,13 +152,13 @@ public class PlayerMovement : MonoBehaviour
             }
 
             // inverter posição boneco
-            if (move < 0)
+            if (move < 0 && facingRight)
             {
-                sprite.flipX = true;
+                flip();
             }
-            else if (move > 0)
+            else if (move > 0 && !facingRight)
             {
-                sprite.flipX = false;
+                flip();
             }
 
 
@@ -166,7 +167,7 @@ public class PlayerMovement : MonoBehaviour
             if (isGrounded)
             {
 
-                ghostJump = 0.2f;
+                ghostJump = 0.1f;
                 walking();
                 if (Input.GetKeyDown(KeyCode.LeftShift))
                 {
@@ -213,6 +214,12 @@ public class PlayerMovement : MonoBehaviour
             }
            
         }
+    }
+
+    void flip()
+    {
+        transform.Rotate(0f, 180f, 0f);
+        facingRight = !facingRight;
     }
 
     private void OnDrawGizmosSelected()
@@ -271,6 +278,7 @@ public class PlayerMovement : MonoBehaviour
     {
         Instantiate(PlayerRifle, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
         Destroy(gameObject);
+        Destroy(transform.parent.gameObject);
     }
 
 }

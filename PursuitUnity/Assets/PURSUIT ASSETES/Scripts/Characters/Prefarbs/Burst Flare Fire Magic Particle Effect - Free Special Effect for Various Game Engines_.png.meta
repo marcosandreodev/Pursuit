@@ -1,0 +1,1618 @@
+fileFormatVersion: 2
+guid: 282f63f0c49ca89489e283b48a3bf765
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 0
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 192
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Burst Flare Fire Magic Particle Effect - Free Special Effect for Various
+        Game Engines__0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2304
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91a8686207836924492ca8f1714275bc
+      internalID: 1182891894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burst Flare Fire Magic Particle Effect - Free Special Effect for Various
+        Game Engines__1
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 2304
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 724e417f87fc5d04694d060d487b6683
+      internalID: -871889543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burst Flare Fire Magic Particle Effect - Free Special Effect for Various
+        Game Engines__2
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 2304
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e02b15fd9a3a2b46a9429eeafdf5766
+      internalID: -217256500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burst Flare Fire Magic Particle Effect - Free Special Effect for Various
+        Game Engines__3
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 2304
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7aace62471a59b448ba9be71ded3bfd
+      internalID: -1584324537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burst Flare Fire Magic Particle Effect - Free Special Effect for Various
+        Game Engines__4
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 2304
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7aafa847892fed54895a4fb1ba00940a
+      internalID: 745523896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burst Flare Fire Magic Particle Effect - Free Special Effect for Various
+        Game Engines__5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2112
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1ac6253feb1483418d118d4ee55ce5a
+      internalID: -1582331050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burst Flare Fire Magic Particle Effect - Free Special Effect for Various
+        Game Engines__6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 2112
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85fad3b1dcbd0be418172826b57185a3
+      internalID: -195594197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burst Flare Fire Magic Particle Effect - Free Special Effect for Various
+        Game Engines__7
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 2112
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b61575eaef58b647adb53750dfbc280
+      internalID: -1547109194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burst Flare Fire Magic Particle Effect - Free Special Effect for Various
+        Game Engines__8
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 2112
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84211b40073110245a90836880bb6f96
+      internalID: -455217615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burst Flare Fire Magic Particle Effect - Free Special Effect for Various
+        Game Engines__9
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 2112
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19fbb1403c75c9c4ca7bb11dc773f61a
+      internalID: -2014190242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burst Flare Fire Magic Particle Effect - Free Special Effect for Various
+        Game Engines__10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1920
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fc288aac9d0764479d0405c8e443228
+      internalID: -2056696798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burst Flare Fire Magic Particle Effect - Free Special Effect for Various
+        Game Engines__11
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1920
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61403649c545e7f4fbd5fcd8c3adb569
+      internalID: -1833777635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burst Flare Fire Magic Particle Effect - Free Special Effect for Various
+        Game Engines__12
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1920
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28d46ab36c9df594e89fc3b532a683de
+      internalID: 842465945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burst Flare Fire Magic Particle Effect - Free Special Effect for Various
+        Game Engines__13
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 1920
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 687ef7946c450b348916595611ec6184
+      internalID: -1680620255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burst Flare Fire Magic Particle Effect - Free Special Effect for Various
+        Game Engines__14
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1920
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23bb6164c7521a44cac1c5960a211943
+      internalID: -1913509622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burst Flare Fire Magic Particle Effect - Free Special Effect for Various
+        Game Engines__15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1728
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f585b247e91a3c40b79aae778132b49
+      internalID: 1747672950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burst Flare Fire Magic Particle Effect - Free Special Effect for Various
+        Game Engines__16
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1728
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7aaa3dea84d46584ea8b027108b6202c
+      internalID: 5990885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burst Flare Fire Magic Particle Effect - Free Special Effect for Various
+        Game Engines__17
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1728
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b2051df79977dd4fa7faddaa0393086
+      internalID: 1052537812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burst Flare Fire Magic Particle Effect - Free Special Effect for Various
+        Game Engines__18
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 1728
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 058da1ad38dc18c429a06f5fc1c1395e
+      internalID: -955715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burst Flare Fire Magic Particle Effect - Free Special Effect for Various
+        Game Engines__19
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1728
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee1929aecfdcedd41b60497be0a1b410
+      internalID: 1232056761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burst Flare Fire Magic Particle Effect - Free Special Effect for Various
+        Game Engines__20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1536
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a71c4d13cf20d9b40a075c37ccede1ba
+      internalID: 1587243026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burst Flare Fire Magic Particle Effect - Free Special Effect for Various
+        Game Engines__21
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1536
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75129eed5f6febb4d9411cda5b9d2e40
+      internalID: 1841394026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burst Flare Fire Magic Particle Effect - Free Special Effect for Various
+        Game Engines__22
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1536
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70487884ca887a14a89ad45707dff25e
+      internalID: -1146017283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burst Flare Fire Magic Particle Effect - Free Special Effect for Various
+        Game Engines__23
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 1536
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e7bc406929072e478868c112d9ec5a8
+      internalID: -1452805937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burst Flare Fire Magic Particle Effect - Free Special Effect for Various
+        Game Engines__24
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1536
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33924828de6768544ab17a60f2bc739d
+      internalID: 1617128241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burst Flare Fire Magic Particle Effect - Free Special Effect for Various
+        Game Engines__25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1344
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1ea478c872073144ba081a5a7ab7193
+      internalID: -593266204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burst Flare Fire Magic Particle Effect - Free Special Effect for Various
+        Game Engines__26
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1344
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3dac075b78f04548ad113bc3562d4ee
+      internalID: -1933206764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burst Flare Fire Magic Particle Effect - Free Special Effect for Various
+        Game Engines__27
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1344
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2377b6a5b3edabd4383e606ddd9d2e62
+      internalID: -1771083461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burst Flare Fire Magic Particle Effect - Free Special Effect for Various
+        Game Engines__28
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 1344
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5b0bd5a5a0b285479a6774527f1c1bc
+      internalID: -1566158498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burst Flare Fire Magic Particle Effect - Free Special Effect for Various
+        Game Engines__29
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1344
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cacd466ad20eaf4cb6103dd6b380426
+      internalID: 282342344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burst Flare Fire Magic Particle Effect - Free Special Effect for Various
+        Game Engines__30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1152
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85237a9b2f9cd2042a40af5f2368a9ac
+      internalID: -897535214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burst Flare Fire Magic Particle Effect - Free Special Effect for Various
+        Game Engines__31
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1152
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41f90028c24311644b54e1a862f36ef8
+      internalID: 1776641962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burst Flare Fire Magic Particle Effect - Free Special Effect for Various
+        Game Engines__32
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1152
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcfa600d599a80449bcef0c21dad2a5b
+      internalID: -2115210370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burst Flare Fire Magic Particle Effect - Free Special Effect for Various
+        Game Engines__33
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 1152
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f77e1f1345006ac4cb28ef01cbf7dd81
+      internalID: 55248551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burst Flare Fire Magic Particle Effect - Free Special Effect for Various
+        Game Engines__34
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1152
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1388a3341fed4a459be45cf125db323
+      internalID: -188404147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burst Flare Fire Magic Particle Effect - Free Special Effect for Various
+        Game Engines__35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 960
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba05108b1e58f6e4db92b6049042414a
+      internalID: -597462842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burst Flare Fire Magic Particle Effect - Free Special Effect for Various
+        Game Engines__36
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 960
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bca08affb69ec74eb57dda43baad4e8
+      internalID: 687047823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burst Flare Fire Magic Particle Effect - Free Special Effect for Various
+        Game Engines__37
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 960
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1618af00ff249e044b1b5288ae068e02
+      internalID: 1844043436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burst Flare Fire Magic Particle Effect - Free Special Effect for Various
+        Game Engines__38
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 960
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14345ef0fea80c24e80f816104ef51c5
+      internalID: -690850844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burst Flare Fire Magic Particle Effect - Free Special Effect for Various
+        Game Engines__39
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 960
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 386bddca93c50a14a9939702aa4a7885
+      internalID: 1295949254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burst Flare Fire Magic Particle Effect - Free Special Effect for Various
+        Game Engines__40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 768
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a63535703ee4ccb4a9eea13c1e609a50
+      internalID: -1610173494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burst Flare Fire Magic Particle Effect - Free Special Effect for Various
+        Game Engines__41
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 768
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91dfd3698834d6c408aa1f8d264afaa8
+      internalID: 617044535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burst Flare Fire Magic Particle Effect - Free Special Effect for Various
+        Game Engines__42
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 768
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fedcbb9ca77e55244943c387e9f01fab
+      internalID: 1841032643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burst Flare Fire Magic Particle Effect - Free Special Effect for Various
+        Game Engines__43
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 768
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14d128feb7709ea4899d45f779d5164e
+      internalID: 949301241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burst Flare Fire Magic Particle Effect - Free Special Effect for Various
+        Game Engines__44
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 768
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c726eb34bc7a2e346ab1c9594665ac61
+      internalID: -150146243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burst Flare Fire Magic Particle Effect - Free Special Effect for Various
+        Game Engines__45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 576
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18e1cb46002049d458b3c0e32df9cdef
+      internalID: 2057520750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burst Flare Fire Magic Particle Effect - Free Special Effect for Various
+        Game Engines__46
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 576
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16bdb9a53d659bc4b8ff9f482a7999bb
+      internalID: 892991595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burst Flare Fire Magic Particle Effect - Free Special Effect for Various
+        Game Engines__47
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 576
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5a92ba87f9ebf4479fab77496964637
+      internalID: 1147707524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burst Flare Fire Magic Particle Effect - Free Special Effect for Various
+        Game Engines__48
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 576
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e2a19313be2ba1429cef46fa6589fa2
+      internalID: -1485963180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burst Flare Fire Magic Particle Effect - Free Special Effect for Various
+        Game Engines__49
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 576
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa5e586a15be7ff4695b4a85a8ac5768
+      internalID: -192410553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burst Flare Fire Magic Particle Effect - Free Special Effect for Various
+        Game Engines__50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d3d5f2c60df5a64d85e64e2c00b077b
+      internalID: 1866946850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burst Flare Fire Magic Particle Effect - Free Special Effect for Various
+        Game Engines__51
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 384
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 369d38afe787ecf41bc309d17266feaa
+      internalID: 1353476003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burst Flare Fire Magic Particle Effect - Free Special Effect for Various
+        Game Engines__52
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 384
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5e0254023db7ab408b0637b56bb9355
+      internalID: 775591851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burst Flare Fire Magic Particle Effect - Free Special Effect for Various
+        Game Engines__53
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 384
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c869a86b24afb5347a109101dd7276b1
+      internalID: 1499542192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burst Flare Fire Magic Particle Effect - Free Special Effect for Various
+        Game Engines__54
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 384
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ac957d1838241849b5635a65f439595
+      internalID: -1143143611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burst Flare Fire Magic Particle Effect - Free Special Effect for Various
+        Game Engines__55
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0691afbe37f193c4499f4aa05d41f3f8
+      internalID: 1033344338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burst Flare Fire Magic Particle Effect - Free Special Effect for Various
+        Game Engines__56
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75788307e60f9eb449b4864ef3f5c361
+      internalID: -124684946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burst Flare Fire Magic Particle Effect - Free Special Effect for Various
+        Game Engines__57
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 192
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ee8957936dc2b940baaf61f6530fb93
+      internalID: 1708969218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burst Flare Fire Magic Particle Effect - Free Special Effect for Various
+        Game Engines__58
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 192
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41a977ab0e349a54cb9cdf7a0441bf7b
+      internalID: 1485335624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burst Flare Fire Magic Particle Effect - Free Special Effect for Various
+        Game Engines__59
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 192
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7553e51e1a87e1d48a14100cb3efa50f
+      internalID: -790776231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burst Flare Fire Magic Particle Effect - Free Special Effect for Various
+        Game Engines__60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2845af25abb10a9419b0ca821cf2c3db
+      internalID: -977235908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burst Flare Fire Magic Particle Effect - Free Special Effect for Various
+        Game Engines__61
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9273abc50a3d9804ab6529d266acc0cd
+      internalID: -1344229655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burst Flare Fire Magic Particle Effect - Free Special Effect for Various
+        Game Engines__62
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c0fba44726340242bca922891df2082
+      internalID: 379077464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burst Flare Fire Magic Particle Effect - Free Special Effect for Various
+        Game Engines__63
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 490fa67b0bfb12541a64055661dad7ca
+      internalID: 555058903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burst Flare Fire Magic Particle Effect - Free Special Effect for Various
+        Game Engines__64
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46e250029320a9441872831ea0808401
+      internalID: 1773332130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Burst Flare Fire Magic Particle Effect - Free Special Effect for Various Game Engines__0: 1182891894
+      Burst Flare Fire Magic Particle Effect - Free Special Effect for Various Game Engines__1: -871889543
+      Burst Flare Fire Magic Particle Effect - Free Special Effect for Various Game Engines__10: -2056696798
+      Burst Flare Fire Magic Particle Effect - Free Special Effect for Various Game Engines__11: -1833777635
+      Burst Flare Fire Magic Particle Effect - Free Special Effect for Various Game Engines__12: 842465945
+      Burst Flare Fire Magic Particle Effect - Free Special Effect for Various Game Engines__13: -1680620255
+      Burst Flare Fire Magic Particle Effect - Free Special Effect for Various Game Engines__14: -1913509622
+      Burst Flare Fire Magic Particle Effect - Free Special Effect for Various Game Engines__15: 1747672950
+      Burst Flare Fire Magic Particle Effect - Free Special Effect for Various Game Engines__16: 5990885
+      Burst Flare Fire Magic Particle Effect - Free Special Effect for Various Game Engines__17: 1052537812
+      Burst Flare Fire Magic Particle Effect - Free Special Effect for Various Game Engines__18: -955715
+      Burst Flare Fire Magic Particle Effect - Free Special Effect for Various Game Engines__19: 1232056761
+      Burst Flare Fire Magic Particle Effect - Free Special Effect for Various Game Engines__2: -217256500
+      Burst Flare Fire Magic Particle Effect - Free Special Effect for Various Game Engines__20: 1587243026
+      Burst Flare Fire Magic Particle Effect - Free Special Effect for Various Game Engines__21: 1841394026
+      Burst Flare Fire Magic Particle Effect - Free Special Effect for Various Game Engines__22: -1146017283
+      Burst Flare Fire Magic Particle Effect - Free Special Effect for Various Game Engines__23: -1452805937
+      Burst Flare Fire Magic Particle Effect - Free Special Effect for Various Game Engines__24: 1617128241
+      Burst Flare Fire Magic Particle Effect - Free Special Effect for Various Game Engines__25: -593266204
+      Burst Flare Fire Magic Particle Effect - Free Special Effect for Various Game Engines__26: -1933206764
+      Burst Flare Fire Magic Particle Effect - Free Special Effect for Various Game Engines__27: -1771083461
+      Burst Flare Fire Magic Particle Effect - Free Special Effect for Various Game Engines__28: -1566158498
+      Burst Flare Fire Magic Particle Effect - Free Special Effect for Various Game Engines__29: 282342344
+      Burst Flare Fire Magic Particle Effect - Free Special Effect for Various Game Engines__3: -1584324537
+      Burst Flare Fire Magic Particle Effect - Free Special Effect for Various Game Engines__30: -897535214
+      Burst Flare Fire Magic Particle Effect - Free Special Effect for Various Game Engines__31: 1776641962
+      Burst Flare Fire Magic Particle Effect - Free Special Effect for Various Game Engines__32: -2115210370
+      Burst Flare Fire Magic Particle Effect - Free Special Effect for Various Game Engines__33: 55248551
+      Burst Flare Fire Magic Particle Effect - Free Special Effect for Various Game Engines__34: -188404147
+      Burst Flare Fire Magic Particle Effect - Free Special Effect for Various Game Engines__35: -597462842
+      Burst Flare Fire Magic Particle Effect - Free Special Effect for Various Game Engines__36: 687047823
+      Burst Flare Fire Magic Particle Effect - Free Special Effect for Various Game Engines__37: 1844043436
+      Burst Flare Fire Magic Particle Effect - Free Special Effect for Various Game Engines__38: -690850844
+      Burst Flare Fire Magic Particle Effect - Free Special Effect for Various Game Engines__39: 1295949254
+      Burst Flare Fire Magic Particle Effect - Free Special Effect for Various Game Engines__4: 745523896
+      Burst Flare Fire Magic Particle Effect - Free Special Effect for Various Game Engines__40: -1610173494
+      Burst Flare Fire Magic Particle Effect - Free Special Effect for Various Game Engines__41: 617044535
+      Burst Flare Fire Magic Particle Effect - Free Special Effect for Various Game Engines__42: 1841032643
+      Burst Flare Fire Magic Particle Effect - Free Special Effect for Various Game Engines__43: 949301241
+      Burst Flare Fire Magic Particle Effect - Free Special Effect for Various Game Engines__44: -150146243
+      Burst Flare Fire Magic Particle Effect - Free Special Effect for Various Game Engines__45: 2057520750
+      Burst Flare Fire Magic Particle Effect - Free Special Effect for Various Game Engines__46: 892991595
+      Burst Flare Fire Magic Particle Effect - Free Special Effect for Various Game Engines__47: 1147707524
+      Burst Flare Fire Magic Particle Effect - Free Special Effect for Various Game Engines__48: -1485963180
+      Burst Flare Fire Magic Particle Effect - Free Special Effect for Various Game Engines__49: -192410553
+      Burst Flare Fire Magic Particle Effect - Free Special Effect for Various Game Engines__5: -1582331050
+      Burst Flare Fire Magic Particle Effect - Free Special Effect for Various Game Engines__50: 1866946850
+      Burst Flare Fire Magic Particle Effect - Free Special Effect for Various Game Engines__51: 1353476003
+      Burst Flare Fire Magic Particle Effect - Free Special Effect for Various Game Engines__52: 775591851
+      Burst Flare Fire Magic Particle Effect - Free Special Effect for Various Game Engines__53: 1499542192
+      Burst Flare Fire Magic Particle Effect - Free Special Effect for Various Game Engines__54: -1143143611
+      Burst Flare Fire Magic Particle Effect - Free Special Effect for Various Game Engines__55: 1033344338
+      Burst Flare Fire Magic Particle Effect - Free Special Effect for Various Game Engines__56: -124684946
+      Burst Flare Fire Magic Particle Effect - Free Special Effect for Various Game Engines__57: 1708969218
+      Burst Flare Fire Magic Particle Effect - Free Special Effect for Various Game Engines__58: 1485335624
+      Burst Flare Fire Magic Particle Effect - Free Special Effect for Various Game Engines__59: -790776231
+      Burst Flare Fire Magic Particle Effect - Free Special Effect for Various Game Engines__6: -195594197
+      Burst Flare Fire Magic Particle Effect - Free Special Effect for Various Game Engines__60: -977235908
+      Burst Flare Fire Magic Particle Effect - Free Special Effect for Various Game Engines__61: -1344229655
+      Burst Flare Fire Magic Particle Effect - Free Special Effect for Various Game Engines__62: 379077464
+      Burst Flare Fire Magic Particle Effect - Free Special Effect for Various Game Engines__63: 555058903
+      Burst Flare Fire Magic Particle Effect - Free Special Effect for Various Game Engines__64: 1773332130
+      Burst Flare Fire Magic Particle Effect - Free Special Effect for Various Game Engines__7: -1547109194
+      Burst Flare Fire Magic Particle Effect - Free Special Effect for Various Game Engines__8: -455217615
+      Burst Flare Fire Magic Particle Effect - Free Special Effect for Various Game Engines__9: -2014190242
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
