@@ -6,11 +6,11 @@ public class PlayerWithRifle : MonoBehaviour
 {
     private float move;
 
-    [SerializeField] private float moveSpeed = 5f;
-    [SerializeField] private float runSpeed = 9f;
+    [SerializeField] private float moveSpeed = 2f;
+    [SerializeField] private float runSpeed = 5f;
     private bool jumping;
     private bool running;
-    [SerializeField] private float jumpSpeed = 20f;
+    [SerializeField] private float jumpSpeed = 7f;
 
     [SerializeField] private float ghostJump;
 
@@ -20,6 +20,7 @@ public class PlayerWithRifle : MonoBehaviour
     public Vector2 sizeCapsule;
     [SerializeField] private float angleCapsule;
     public LayerMask whatIsGround;
+    bool facingRight = true;
 
     public GameObject DisplayMessage;
 
@@ -31,6 +32,7 @@ public class PlayerWithRifle : MonoBehaviour
 
     public void walking()
     {
+
         if (isGrounded && running == false)
         {
             animationPlayer.SetBool("Running", false);
@@ -123,6 +125,8 @@ public class PlayerWithRifle : MonoBehaviour
 
         sizeCapsule = new Vector2(0.42f, 0.3f);
         angleCapsule = -90f;
+
+
     }
 
     // Update is called once per frame
@@ -142,15 +146,31 @@ public class PlayerWithRifle : MonoBehaviour
         }
 
         // inverter posição boneco
-        if(move < 0)
+        if (move < 0 && facingRight)
         {
-            sprite.flipX= true;
+            flip();
         }
-        else if(move > 0)
+        else if (move > 0 && !facingRight)
         {
-            sprite.flipX= false;
+            flip();
         }
-
+        if( rb.velocity.y==0 && isGrounded)
+        {
+            if (Input.GetButtonDown("Fire1"))
+            {
+                animationPlayer.SetBool("Walking", false);
+                animationPlayer.SetBool("Shooting", true);
+                rb.constraints = RigidbodyConstraints2D.FreezePosition;
+                rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+            }
+            if (Input.GetButtonUp("Fire1"))
+            {
+                animationPlayer.SetBool("Walking", true);
+                animationPlayer.SetBool("Shooting", false);
+                rb.constraints = RigidbodyConstraints2D.FreezePosition;
+                rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+            }
+        }
 
         //Animação boneco
 
@@ -186,6 +206,12 @@ public class PlayerWithRifle : MonoBehaviour
             }
             jump();
         }
+    }
+
+    void flip()
+    {
+        transform.Rotate(0f, 180f, 0f);
+        facingRight = !facingRight;
     }
 
     private void OnDrawGizmosSelected()
