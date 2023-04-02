@@ -1,20 +1,36 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
+using UnityEditor.VersionControl;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
     private float move;
-    [SerializeField] private float moveSpeed = 5f;
+    [SerializeField] private bool rifleBool = false;
+    [SerializeField] private Transform rifle;
+    [SerializeField] private GameObject PlayerRifle;
+ 
+
+    [SerializeField] private float moveSpeed = 2f;
+    [SerializeField] private float runSpeed = 5f;
     private bool jumping;
-    [SerializeField] private float jumpSpeed = 6f;
+    private bool running;
+    [SerializeField] private float jumpSpeed = 7f;
+
+    [SerializeField] private float ghostJump;
 
     [SerializeField] private bool isGrounded;
+    [SerializeField] private bool isTriggered;
     public Transform feetPosition;
-    public float sizeRadius;
+    public Vector2 sizeCapsule;
+    [SerializeField] private float angleCapsule;
     public LayerMask whatIsGround;
+    bool facingRight = true;
 
-
+    public GameObject DisplayMessage;
+  
 
     Rigidbody2D rb;
     SpriteRenderer sprite;
@@ -22,8 +38,10 @@ public class PlayerMovement : MonoBehaviour
 
     public void walking()
     {
-        if (isGrounded)
+        if (isGrounded && running == false)
         {
+            animationPlayer.SetBool("Running", false);
+            animationPlayer.SetBool("Walking", false);
             animationPlayer.SetBool("JumpingV", false);
             animationPlayer.SetBool("JumpingH", false);
             animationPlayer.SetBool("FallingV", false);
@@ -38,7 +56,31 @@ public class PlayerMovement : MonoBehaviour
                 animationPlayer.SetBool("Walking", false);
             }
         }
+        if (running == true)
+        {
+            if (isGrounded)
+            {
+                animationPlayer.SetBool("Running", false);
+                animationPlayer.SetBool("Walking", false);
+                animationPlayer.SetBool("JumpingV", false);
+                animationPlayer.SetBool("JumpingH", false);
+                animationPlayer.SetBool("FallingV", false);
+                animationPlayer.SetBool("FallingH", false);
+
+                if (rb.velocity.x != 0 && move != 0)
+                {
+                    animationPlayer.SetBool("Running", true);
+                }
+                else
+                {
+                    animationPlayer.SetBool("Running", false);
+                    animationPlayer.SetBool("Walking", false);
+                }
+            }
+        }
     }
+
+   
 
     public void jump()
     {
@@ -63,7 +105,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            if (rb.velocity.y > 0)
+            if (rb.velocity.y > 0 && rb.velocity.x != 0)
             {
                 animationPlayer.SetBool("JumpingV", false);
                 animationPlayer.SetBool("JumpingH", true);
@@ -87,57 +129,158 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
         animationPlayer = GetComponent<Animator>();
+
+        sizeCapsule = new Vector2(0.13f, -0.04f);
+        angleCapsule = -90f;
     }
 
     // Update is called once per frame
     void Update()
     {
-        //Reconhecer o chão
-
-        isGrounded= Physics2D.OverlapCircle(feetPosition.position,sizeRadius,whatIsGround);
-
-        move = Input.GetAxis("Horizontal");
-
-        //input do pulo do personagem
-
-        if (Input.GetButtonDown("Jump") && isGrounded)
+        if (rifleBool == false)
         {
-            jumping=true; 
-        }
+            //Reconhecer o chão
 
-        // inverter posição boneco
-        if(move < 0)
-        {
-            sprite.flipX= true;
-        }
-        else if(move > 0)
-        {
-            sprite.flipX= false;
-        }
+            isGrounded = Physics2D.OverlapCapsule(feetPosition.position, sizeCapsule, CapsuleDirection2D.Horizontal, angleCapsule, whatIsGround);
+
+            move = Input.GetAxis("Horizontal");
+
+            //input do pulo do personagem
+
+            if (Input.GetButtonDown("Jump") && ghostJump > 0)
+            {
+                jumping = true;
+            }
+
+            // inverter posição boneco
+            if (move < 0 && facingRight)
+            {
+                flip();
+            }
+            else if (move > 0 && !facingRight)
+            {
+                flip();
+            }
 
 
-        //Animação boneco
+            //Animação boneco
 
-        if (isGrounded)
-        {
-            walking();
+            if (isGrounded)
+            {
+
+                ghostJump = 0.1f;
+                walking();
+                if (Input.GetKeyDown(KeyCode.LeftShift))
+                {
+                    running=true;
+                    
+                }
+                if (Input.GetKeyUp(KeyCode.LeftShift))
+                {
+                    running = false;
+                }
+
+            }
+            else
+            {
+                ghostJump -= Time.deltaTime;
+                if (ghostJump <= 0)
+                {
+                    ghostJump = 0;
+                }
+                if (Input.GetKeyDown(KeyCode.LeftShift) && rb.velocity.y == 0)
+                {
+                    running = true;
+                }
+                if (Input.GetKeyUp(KeyCode.LeftShift) && rb.velocity.y != 0)
+                {
+                    running = false;
+                }
+                jump();
+            }
         }
-        else
+        if( isTriggered == true)
         {
-            jump();
+            DisplayMessage.SetActive(true);
+
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                rifleBool = true;
+                animationPlayer.SetBool("Walking", false);
+                animationPlayer.SetBool("PickRifle", true);
+                sprite.flipX = false;
+                rb.constraints = RigidbodyConstraints2D.FreezePosition;
+                rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+                transform.position = rifle.position;
+            }
+           
         }
+    }
+
+    void flip()
+    {
+        transform.Rotate(0f, 180f, 0f);
+        facingRight = !facingRight;
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireCube(feetPosition.position, sizeCapsule);
     }
 
     void FixedUpdate()
     {
-        //andar
-        rb.velocity= new Vector2(move * moveSpeed, rb.velocity.y);
-        //pulo
-        if (jumping)
+        if (rifleBool == false)
         {
-            rb.velocity = Vector2.up * jumpSpeed;
+            //andar
+            rb.velocity = new Vector2(move * moveSpeed, rb.velocity.y);
+            //pulo
 
-            jumping= false;
+            if (running)
+            {
+                rb.velocity = new Vector2(move * runSpeed, rb.velocity.y);
+            }
+
+            if (jumping)
+            {
+                rb.velocity = Vector2.up * jumpSpeed;
+
+                jumping = false;
+                
+            }
         }
     }
+    private void OnTriggerEnter2D(Collider2D coll)
+    {
+        if(coll.gameObject.tag == "Rifle" && isGrounded)
+        {
+            isTriggered = true;
+        }
+        else
+        {
+            isTriggered = false;
+        }
+    }
+    private void OnTriggerExit2D(Collider2D coll)
+    {
+        if (coll.gameObject.tag == "Rifle" && isGrounded)
+        {
+            isTriggered = false;
+        }
+    }
+
+     void DestroyRifle()
+    {
+        Destroy(rifle.gameObject);
+    }
+
+    void DestroyPlayer()
+    {
+        Instantiate(PlayerRifle, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
+       
+        Destroy(gameObject);
+        Destroy(transform.parent.gameObject);
+    }
+
 }
