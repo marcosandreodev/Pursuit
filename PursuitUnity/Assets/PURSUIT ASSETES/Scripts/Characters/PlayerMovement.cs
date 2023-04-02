@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private bool rifleBool = false;
     [SerializeField] private Transform rifle;
     [SerializeField] private GameObject PlayerRifle;
+ 
 
     [SerializeField] private float moveSpeed = 2f;
     [SerializeField] private float runSpeed = 5f;
@@ -277,6 +278,7 @@ public class PlayerMovement : MonoBehaviour
     void DestroyPlayer()
     {
         Instantiate(PlayerRifle, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
+       
         Destroy(gameObject);
         Destroy(transform.parent.gameObject);
     }
