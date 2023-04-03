@@ -42,9 +42,11 @@ public class PlayerWithRifle : MonoBehaviour
             animationPlayer.SetBool("FallingV", false);
             animationPlayer.SetBool("FallingH", false);
 
+
             if (rb.velocity.x != 0 && move != 0)
             {
                 animationPlayer.SetBool("Walking", true);
+                animationPlayer.SetBool("Shooting", false);
             }
             else
             {
@@ -61,11 +63,15 @@ public class PlayerWithRifle : MonoBehaviour
                 animationPlayer.SetBool("JumpingH", false);
                 animationPlayer.SetBool("FallingV", false);
                 animationPlayer.SetBool("FallingH", false);
+                animationPlayer.SetBool("Shooting", false);
 
                 if (rb.velocity.x != 0 && move != 0)
                 {
                     animationPlayer.SetBool("Running", true);
+                    animationPlayer.SetBool("Shooting", false);
+
                 }
+                
                 else
                 {
                     animationPlayer.SetBool("Running", false);
@@ -80,6 +86,7 @@ public class PlayerWithRifle : MonoBehaviour
         if (rb.velocity.x == 0)
         {
             animationPlayer.SetBool("Walking", false);
+            animationPlayer.SetBool("Shooting", false);
 
             if (rb.velocity.y > 0)
             {
@@ -87,6 +94,7 @@ public class PlayerWithRifle : MonoBehaviour
                 animationPlayer.SetBool("JumpingH", false);
                 animationPlayer.SetBool("FallingV", false);
                 animationPlayer.SetBool("FallingH", false);
+                animationPlayer.SetBool("Shooting", false);
             }
             if (rb.velocity.y < 0)
             {
@@ -94,6 +102,7 @@ public class PlayerWithRifle : MonoBehaviour
                 animationPlayer.SetBool("JumpingH", false);
                 animationPlayer.SetBool("FallingV", true);
                 animationPlayer.SetBool("FallingH", false);
+                animationPlayer.SetBool("Shooting", false);
             }
         }
         else
@@ -104,6 +113,7 @@ public class PlayerWithRifle : MonoBehaviour
                 animationPlayer.SetBool("JumpingH", true);
                 animationPlayer.SetBool("FallingV", false);
                 animationPlayer.SetBool("FallingH", false);
+                animationPlayer.SetBool("Shooting", false);
             }
             if (rb.velocity.y < 0)
             {
@@ -111,6 +121,7 @@ public class PlayerWithRifle : MonoBehaviour
                 animationPlayer.SetBool("JumpingH", false);
                 animationPlayer.SetBool("FallingV", false);
                 animationPlayer.SetBool("FallingH", true);
+
             }
         }
     }
@@ -154,9 +165,9 @@ public class PlayerWithRifle : MonoBehaviour
         {
             flip();
         }
-        if( rb.velocity.y==0 && isGrounded)
+        if( rb.velocity.y==0 && rb.velocity.x==0 && isGrounded)
         {
-            if (Input.GetButtonDown("Fire1"))
+            if (Input.GetButton("Fire1"))
             {
                 animationPlayer.SetBool("Walking", false);
                 animationPlayer.SetBool("Shooting", true);
