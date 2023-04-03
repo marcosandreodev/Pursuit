@@ -123,7 +123,7 @@ public class PlayerWithRifle : MonoBehaviour
         sprite = GetComponent<SpriteRenderer>();
         animationPlayer = GetComponent<Animator>();
 
-        sizeCapsule = new Vector2(0.42f, 0.3f);
+        sizeCapsule = new Vector2(0.13f, -0.04f);
         angleCapsule = -90f;
 
 
