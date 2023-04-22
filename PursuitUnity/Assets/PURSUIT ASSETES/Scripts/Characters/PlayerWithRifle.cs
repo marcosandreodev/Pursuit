@@ -21,6 +21,7 @@ public class PlayerWithRifle : MonoBehaviour
     [SerializeField] private float angleCapsule;
     public LayerMask whatIsGround;
     bool facingRight = true;
+    bool isShooting = false;
 
     public GameObject DisplayMessage;
 
@@ -29,10 +30,30 @@ public class PlayerWithRifle : MonoBehaviour
     SpriteRenderer sprite;
     Animator animationPlayer;
 
+    public void StopReloading()
+    {
+        animationPlayer.SetBool("Reloading", false);
+        moveSpeed = 2f;
+        runSpeed = 5f;
+    }
+
+    public void Shooting()
+    {
+        moveSpeed = 2f;
+        runSpeed = 5f;
+        animationPlayer.SetBool("Running", false);
+        animationPlayer.SetBool("Walking", false);
+        animationPlayer.SetBool("JumpingV", false);
+        animationPlayer.SetBool("JumpingH", false);
+        animationPlayer.SetBool("FallingV", false);
+        animationPlayer.SetBool("FallingH", false);
+        animationPlayer.SetBool("Shooting", true);     
+    }
 
     public void walking()
     {
-
+        moveSpeed = 2f;
+        runSpeed = 5f;
         if (isGrounded && running == false)
         {
             animationPlayer.SetBool("Running", false);
@@ -41,12 +62,14 @@ public class PlayerWithRifle : MonoBehaviour
             animationPlayer.SetBool("JumpingH", false);
             animationPlayer.SetBool("FallingV", false);
             animationPlayer.SetBool("FallingH", false);
+            
 
 
             if (rb.velocity.x != 0 && move != 0)
             {
                 animationPlayer.SetBool("Walking", true);
                 animationPlayer.SetBool("Shooting", false);
+
             }
             else
             {
@@ -63,13 +86,12 @@ public class PlayerWithRifle : MonoBehaviour
                 animationPlayer.SetBool("JumpingH", false);
                 animationPlayer.SetBool("FallingV", false);
                 animationPlayer.SetBool("FallingH", false);
-                animationPlayer.SetBool("Shooting", false);
+                
+
 
                 if (rb.velocity.x != 0 && move != 0)
                 {
                     animationPlayer.SetBool("Running", true);
-                    animationPlayer.SetBool("Shooting", false);
-
                 }
                 
                 else
@@ -165,23 +187,31 @@ public class PlayerWithRifle : MonoBehaviour
         {
             flip();
         }
-        if( rb.velocity.y==0 && rb.velocity.x==0 && isGrounded)
+
+
+        if (Input.GetButtonDown("Fire1"))
         {
-            if (Input.GetButton("Fire1"))
-            {
-                animationPlayer.SetBool("Walking", false);
-                animationPlayer.SetBool("Shooting", true);
-                rb.constraints = RigidbodyConstraints2D.FreezePosition;
-                rb.constraints = RigidbodyConstraints2D.FreezeRotation;
-            }
-            if (Input.GetButtonUp("Fire1"))
-            {
-                animationPlayer.SetBool("Walking", true);
-                animationPlayer.SetBool("Shooting", false);
-                rb.constraints = RigidbodyConstraints2D.FreezePosition;
-                rb.constraints = RigidbodyConstraints2D.FreezeRotation;
-            }
+            isShooting=true;
         }
+
+        if (Input.GetButtonUp("Fire1"))
+        {
+            animationPlayer.SetBool("Shooting", false);
+            isShooting = false;  
+        }
+        if (isShooting)
+        {
+            Shooting();
+        }
+        if (Input.GetKeyDown(KeyCode.R)){
+
+            animationPlayer.SetBool("Reloading", true);
+            moveSpeed = 0f;
+            runSpeed = 0f;
+            animationPlayer.SetBool("Shooting", false);
+            isShooting = false;
+        }
+       
 
         //Animação boneco
 

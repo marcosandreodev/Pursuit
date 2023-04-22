@@ -130,7 +130,7 @@ public class PlayerMovement : MonoBehaviour
         sprite = GetComponent<SpriteRenderer>();
         animationPlayer = GetComponent<Animator>();
 
-        sizeCapsule = new Vector2(0.13f, -0.04f);
+        sizeCapsule = new Vector2(0.13f, -0.01f);
         angleCapsule = -90f;
     }
 

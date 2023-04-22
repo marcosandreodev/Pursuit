@@ -12,7 +12,8 @@ public class Weapon : MonoBehaviour
     public float firerate;
     float nextfire;
     public int bullets = 32;
-    bool firing = false;
+    public bool isReloading = false;
+
 
 
 
@@ -39,7 +40,7 @@ public class Weapon : MonoBehaviour
 
     void Shoot()
     {
-        if (bullets > 0)
+        if (bullets > 0 && !isReloading)
         {
             if (Time.time > nextfire)
             {
@@ -50,6 +51,16 @@ public class Weapon : MonoBehaviour
             
         }
 
+    }
+
+    void IsNotReloading()
+    {
+        isReloading = false;
+    }
+
+    void IsReloading()
+    {
+        isReloading = true;
     }
     
     void Reload()

@@ -109,7 +109,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 320
+        y: 384
         width: 64
         height: 64
       alignment: 0
@@ -130,7 +130,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
-        y: 320
+        y: 384
         width: 64
         height: 64
       alignment: 0
@@ -151,7 +151,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 128
-        y: 320
+        y: 384
         width: 64
         height: 64
       alignment: 0
@@ -172,7 +172,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 192
-        y: 320
+        y: 384
         width: 64
         height: 64
       alignment: 0
@@ -193,7 +193,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 256
-        y: 320
+        y: 384
         width: 64
         height: 64
       alignment: 0
@@ -214,7 +214,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 320
-        y: 320
+        y: 384
         width: 64
         height: 64
       alignment: 0
@@ -235,7 +235,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 384
-        y: 320
+        y: 384
         width: 64
         height: 64
       alignment: 0
@@ -256,7 +256,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 256
+        y: 320
         width: 64
         height: 64
       alignment: 0
@@ -277,7 +277,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
-        y: 256
+        y: 320
         width: 64
         height: 64
       alignment: 0
@@ -298,7 +298,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 128
-        y: 256
+        y: 320
         width: 64
         height: 64
       alignment: 0
@@ -319,7 +319,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 192
-        y: 256
+        y: 320
         width: 64
         height: 64
       alignment: 0
@@ -340,7 +340,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 256
-        y: 256
+        y: 320
         width: 64
         height: 64
       alignment: 0
@@ -361,7 +361,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 320
-        y: 256
+        y: 320
         width: 64
         height: 64
       alignment: 0
@@ -382,7 +382,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 384
-        y: 256
+        y: 320
         width: 64
         height: 64
       alignment: 0
@@ -403,7 +403,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 192
+        y: 256
         width: 64
         height: 64
       alignment: 0
@@ -424,7 +424,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
-        y: 192
+        y: 256
         width: 64
         height: 64
       alignment: 0
@@ -445,7 +445,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 128
-        y: 192
+        y: 256
         width: 64
         height: 64
       alignment: 0
@@ -466,7 +466,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 192
-        y: 192
+        y: 256
         width: 64
         height: 64
       alignment: 0
@@ -487,7 +487,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 256
-        y: 192
+        y: 256
         width: 64
         height: 64
       alignment: 0
@@ -508,7 +508,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 320
-        y: 192
+        y: 256
         width: 64
         height: 64
       alignment: 0
@@ -529,7 +529,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 384
-        y: 192
+        y: 256
         width: 64
         height: 64
       alignment: 0
@@ -550,7 +550,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 128
+        y: 192
         width: 64
         height: 64
       alignment: 0
@@ -571,7 +571,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
-        y: 128
+        y: 192
         width: 64
         height: 64
       alignment: 0
@@ -592,7 +592,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 128
-        y: 128
+        y: 192
         width: 64
         height: 64
       alignment: 0
@@ -613,7 +613,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 192
-        y: 128
+        y: 192
         width: 64
         height: 64
       alignment: 0
@@ -634,7 +634,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 256
-        y: 128
+        y: 192
         width: 64
         height: 64
       alignment: 0
@@ -655,7 +655,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 320
-        y: 128
+        y: 192
         width: 64
         height: 64
       alignment: 0
@@ -676,7 +676,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 384
-        y: 128
+        y: 192
         width: 64
         height: 64
       alignment: 0
@@ -697,7 +697,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 64
+        y: 128
         width: 64
         height: 64
       alignment: 0
@@ -718,7 +718,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
-        y: 64
+        y: 128
         width: 64
         height: 64
       alignment: 0
@@ -739,7 +739,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 128
-        y: 64
+        y: 128
         width: 64
         height: 64
       alignment: 0
@@ -760,7 +760,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 192
-        y: 64
+        y: 128
         width: 64
         height: 64
       alignment: 0
@@ -781,7 +781,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 256
-        y: 64
+        y: 128
         width: 64
         height: 64
       alignment: 0
@@ -802,7 +802,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 320
-        y: 64
+        y: 128
         width: 64
         height: 64
       alignment: 0
@@ -823,7 +823,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 384
-        y: 64
+        y: 128
         width: 64
         height: 64
       alignment: 0
@@ -844,7 +844,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 64
         width: 64
         height: 64
       alignment: 0
@@ -865,7 +865,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
-        y: 0
+        y: 64
         width: 64
         height: 64
       alignment: 0
@@ -886,7 +886,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 128
-        y: 0
+        y: 64
         width: 64
         height: 64
       alignment: 0
@@ -898,6 +898,216 @@ TextureImporter:
       bones: []
       spriteID: 1fb937c4542d8c24f9112c52a2abe954
       internalID: 916416497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rifle_38
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd8adca4117d96d41be1b560dbe3458e
+      internalID: -1231306266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rifle_39
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73c56f92430479c4a8e7f1e4df5849da
+      internalID: 1995430744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rifle_40
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c94d969ffb4b3441ba8fee63a7d9c9f
+      internalID: 1722014385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rifle_41
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47c1292ed4038714e91f9d3844e1f708
+      internalID: -1534389813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rifle_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c7e7fbb69158bb459979fc88b2ef5a1
+      internalID: 747110576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rifle_43
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b52580dfaa8873449a2f29cecad6b521
+      internalID: -1369184364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rifle_44
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c879fce46c1185478a6cc3e236f54cb
+      internalID: 223971373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rifle_45
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15fecb3277cfdc54398401626798a62a
+      internalID: -1377665973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rifle_46
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25fb758d9447cdb4a8618ae32e67d927
+      internalID: -1417287733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rifle_47
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ff9f2ddaf2258142bf26495d38674b7
+      internalID: 1688389235
       vertices: []
       indices: 
       edges: []
@@ -945,7 +1155,17 @@ TextureImporter:
       Rifle_35: 958164295
       Rifle_36: -1561621331
       Rifle_37: 916416497
+      Rifle_38: -1231306266
+      Rifle_39: 1995430744
       Rifle_4: 1868661004
+      Rifle_40: 1722014385
+      Rifle_41: -1534389813
+      Rifle_42: 747110576
+      Rifle_43: -1369184364
+      Rifle_44: 223971373
+      Rifle_45: -1377665973
+      Rifle_46: -1417287733
+      Rifle_47: 1688389235
       Rifle_5: -2037231708
       Rifle_6: -1050908376
       Rifle_7: -1356863283
