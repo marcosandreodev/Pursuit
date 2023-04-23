@@ -22,6 +22,7 @@ public class PlayerWithRifle : MonoBehaviour
     public LayerMask whatIsGround;
     bool facingRight = true;
     bool isShooting = false;
+    bool isReloading =false;
 
     public GameObject DisplayMessage;
 
@@ -192,9 +193,14 @@ public class PlayerWithRifle : MonoBehaviour
         if (Input.GetButtonDown("Fire1"))
         {
             isShooting=true;
+            
+        }
+        if (Input.GetButton("Fire1") && isReloading)
+        {
+            animationPlayer.SetBool("Shooting", true);
         }
 
-        if (Input.GetButtonUp("Fire1"))
+            if (Input.GetButtonUp("Fire1"))
         {
             animationPlayer.SetBool("Shooting", false);
             isShooting = false;  
@@ -204,18 +210,22 @@ public class PlayerWithRifle : MonoBehaviour
             Shooting();
         }
         if (Input.GetKeyDown(KeyCode.R)){
-
+            isReloading = true;
             animationPlayer.SetBool("Reloading", true);
             moveSpeed = 0f;
             runSpeed = 0f;
             animationPlayer.SetBool("Shooting", false);
             isShooting = false;
         }
-       
+        if (Input.GetKeyUp(KeyCode.R))
+        {
+            isReloading = false;
+        }
 
-        //Animação boneco
 
-        if (isGrounded)
+            //Animação boneco
+
+            if (isGrounded)
         {
             ghostJump = 0.2f;
             walking();

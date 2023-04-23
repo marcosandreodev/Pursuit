@@ -10,7 +10,7 @@ public class EnemyMovement : MonoBehaviour
     public int patrolDestination;
     public Transform playerTransform;
     public bool isChasing;
-    public float chaseDistance;
+    public float chaseDistance =2 ;
 
    
     void Update()
