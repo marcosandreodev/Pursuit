@@ -13,7 +13,9 @@ public class WeaponController : MonoBehaviour
     public bool isWithRifle;
     public bool IsWithHands;
     bool changedGun;
+
     
+
 
     //fazer logica para verificar se isHands
     // implementar Animações no Animation Controller de acordo com cada variavel, isWithRifle, IsWithHands
@@ -23,21 +25,23 @@ public class WeaponController : MonoBehaviour
         playerUseRifle = GetComponent<PlayerWithRifle>();
         playerHands = GetComponent<PlayerMovement>();
         weapon = GetComponent<Weapon>();
+       
     }
 
     void Update()
     {
         //enable rifle
-        if (Input.GetKeyDown(KeyCode.Alpha2))
+        if (Input.GetKeyDown(KeyCode.Alpha2) && playerHands.playerPickedRifle)
         {
             changedGun = true;
-            hands();
+            rifle();
         }
         //enable hands
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             changedGun = true;
-            rifle();
+            hands();
+            
         }
        
     }
