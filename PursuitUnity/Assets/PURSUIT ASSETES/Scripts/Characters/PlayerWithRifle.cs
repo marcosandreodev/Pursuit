@@ -21,84 +21,84 @@ public class PlayerWithRifle : MonoBehaviour
     [SerializeField] private float angleCapsule;
     public LayerMask whatIsGround;
     bool facingRight = true;
-    bool isShooting = false;
-    bool isReloading =false;
+    public bool isShooting = false;
+    public bool isReloading =false;
 
     public GameObject DisplayMessage;
 
 
     Rigidbody2D rb;
     SpriteRenderer sprite;
-    Animator animationPlayer;
+    private Animator animator;
+    private string currentAnimation;
 
-    public void StopReloading()
-    {
-        animationPlayer.SetBool("Reloading", false);
+    const string PLAYER_IDLE = "IdleMainRifle";
+    const string PLAYER_WALK = "WalkRifle";
+    const string PLAYER_RUN = "RunningRifle";
+    const string PLAYER_JUMPH = "JumpingHRifle";
+    const string PLAYER_FALLH = "FallingHRifle";
+    const string PLAYER_JUMPV = "JumpingVRifle";
+    const string PLAYER_FALLV = "FallingVRifle";
+    const string PLAYER_RELOAD = "Reload";
+    const string PLAYER_SHOOT = "Shoot";
+
+    public void StopReloading() {
+
+        if (Input.GetButton("Fire1"))
+        {
+            ChangeAnimationState(PLAYER_SHOOT);
+        }
+        isReloading = false;
         moveSpeed = 2f;
         runSpeed = 5f;
+        
     }
 
     public void Shooting()
     {
+        ChangeAnimationState(PLAYER_SHOOT);
         moveSpeed = 2f;
-        runSpeed = 5f;
-        animationPlayer.SetBool("Running", false);
-        animationPlayer.SetBool("Walking", false);
-        animationPlayer.SetBool("JumpingV", false);
-        animationPlayer.SetBool("JumpingH", false);
-        animationPlayer.SetBool("FallingV", false);
-        animationPlayer.SetBool("FallingH", false);
-        animationPlayer.SetBool("Shooting", true);     
+        runSpeed = 5f;    
     }
 
+    
     public void walking()
     {
         moveSpeed = 2f;
         runSpeed = 5f;
-        if (isGrounded && running == false)
+        if (isGrounded && running == false && isReloading == false && isShooting == false)
         {
-            animationPlayer.SetBool("Running", false);
-            animationPlayer.SetBool("Walking", false);
-            animationPlayer.SetBool("JumpingV", false);
-            animationPlayer.SetBool("JumpingH", false);
-            animationPlayer.SetBool("FallingV", false);
-            animationPlayer.SetBool("FallingH", false);
-            
-
 
             if (rb.velocity.x != 0 && move != 0)
             {
-                animationPlayer.SetBool("Walking", true);
-                animationPlayer.SetBool("Shooting", false);
+                ChangeAnimationState(PLAYER_WALK);
 
             }
             else
             {
-                animationPlayer.SetBool("Walking", false);
+                if (!isShooting && !isReloading)
+                {
+                    ChangeAnimationState(PLAYER_IDLE);
+                }
             }
         }
-        if (running == true)
+        if (running == true && isReloading == false && isShooting == false)
         {
             if (isGrounded)
             {
-                animationPlayer.SetBool("Running", false);
-                animationPlayer.SetBool("Walking", false);
-                animationPlayer.SetBool("JumpingV", false);
-                animationPlayer.SetBool("JumpingH", false);
-                animationPlayer.SetBool("FallingV", false);
-                animationPlayer.SetBool("FallingH", false);
-                
-
 
                 if (rb.velocity.x != 0 && move != 0)
                 {
-                    animationPlayer.SetBool("Running", true);
+                    ChangeAnimationState(PLAYER_RUN);
                 }
-                
+
                 else
                 {
-                    animationPlayer.SetBool("Running", false);
-                    animationPlayer.SetBool("Walking", false);
+                    if(!isShooting)
+                    {
+                        ChangeAnimationState(PLAYER_IDLE);
+                    }
+                   
                 }
             }
         }
@@ -108,42 +108,28 @@ public class PlayerWithRifle : MonoBehaviour
     {
         if (rb.velocity.x == 0)
         {
-            animationPlayer.SetBool("Walking", false);
-            animationPlayer.SetBool("Shooting", false);
-
+            //Pulo Vertical
             if (rb.velocity.y > 0)
             {
-                animationPlayer.SetBool("JumpingV", true);
-                animationPlayer.SetBool("JumpingH", false);
-                animationPlayer.SetBool("FallingV", false);
-                animationPlayer.SetBool("FallingH", false);
-                animationPlayer.SetBool("Shooting", false);
+                ChangeAnimationState(PLAYER_JUMPV);
             }
+            //Queda Vertical
             if (rb.velocity.y < 0)
             {
-                animationPlayer.SetBool("JumpingV", false);
-                animationPlayer.SetBool("JumpingH", false);
-                animationPlayer.SetBool("FallingV", true);
-                animationPlayer.SetBool("FallingH", false);
-                animationPlayer.SetBool("Shooting", false);
+                ChangeAnimationState(PLAYER_FALLV);
             }
         }
         else
         {
+            //Pulo Horizontal
             if (rb.velocity.y > 0 && rb.velocity.x != 0)
             {
-                animationPlayer.SetBool("JumpingV", false);
-                animationPlayer.SetBool("JumpingH", true);
-                animationPlayer.SetBool("FallingV", false);
-                animationPlayer.SetBool("FallingH", false);
-                animationPlayer.SetBool("Shooting", false);
+                ChangeAnimationState(PLAYER_JUMPH);
             }
+            //Queda Horizontal
             if (rb.velocity.y < 0)
             {
-                animationPlayer.SetBool("JumpingV", false);
-                animationPlayer.SetBool("JumpingH", false);
-                animationPlayer.SetBool("FallingV", false);
-                animationPlayer.SetBool("FallingH", true);
+                ChangeAnimationState(PLAYER_FALLH);
 
             }
         }
@@ -155,12 +141,10 @@ public class PlayerWithRifle : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
-        animationPlayer = GetComponent<Animator>();
+        animator = GetComponent<Animator>();
 
         sizeCapsule = new Vector2(0.13f, -0.04f);
         angleCapsule = -90f;
-
-
     }
 
     // Update is called once per frame
@@ -170,7 +154,7 @@ public class PlayerWithRifle : MonoBehaviour
 
         isGrounded= Physics2D.OverlapCapsule(feetPosition.position, sizeCapsule, CapsuleDirection2D.Horizontal, angleCapsule, whatIsGround);
 
-        move = Input.GetAxis("Horizontal");
+        move = gameObject.GetComponent<MoveRightOrLeft>().direction;
 
         //input do pulo do personagem
 
@@ -180,52 +164,42 @@ public class PlayerWithRifle : MonoBehaviour
         }
 
         // inverter posição boneco
-        if (move < 0 && facingRight)
-        {
-            flip();
-        }
-        else if (move > 0 && !facingRight)
-        {
-            flip();
-        }
+       
 
+        if (Input.GetButtonDown("Fire1") && move == 0 && !jumping)
 
-        if (Input.GetButtonDown("Fire1"))
         {
-            isShooting=true;
-            
+            isShooting = true;
         }
-        if (Input.GetButton("Fire1") && isReloading)
+        if (Input.GetButton("Fire1") && !isReloading && move == 0 && !jumping)
         {
-            animationPlayer.SetBool("Shooting", true);
+            isShooting = true;
         }
-
-            if (Input.GetButtonUp("Fire1"))
+        if (Input.GetButtonUp("Fire1"))
         {
-            animationPlayer.SetBool("Shooting", false);
-            isShooting = false;  
+            isShooting = false;
+        }
+        if (isReloading && Input.GetButtonDown("Fire1"))
+        {
+            isShooting = false;
         }
         if (isShooting)
         {
             Shooting();
         }
-        if (Input.GetKeyDown(KeyCode.R)){
+        if (Input.GetKeyDown(KeyCode.R))
+        {
             isReloading = true;
-            animationPlayer.SetBool("Reloading", true);
+            ChangeAnimationState(PLAYER_RELOAD);
             moveSpeed = 0f;
             runSpeed = 0f;
-            animationPlayer.SetBool("Shooting", false);
+            move = 0;
             isShooting = false;
         }
-        if (Input.GetKeyUp(KeyCode.R))
-        {
-            isReloading = false;
-        }
+        
+        //Animação boneco
 
-
-            //Animação boneco
-
-            if (isGrounded)
+        if (isGrounded)
         {
             ghostJump = 0.2f;
             walking();
@@ -259,13 +233,9 @@ public class PlayerWithRifle : MonoBehaviour
         }
     }
 
-    void flip()
-    {
-        transform.Rotate(0f, 180f, 0f);
-        facingRight = !facingRight;
-    }
+   
 
-    private void OnDrawGizmosSelected()
+    void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireCube(feetPosition.position, sizeCapsule);
@@ -273,20 +243,31 @@ public class PlayerWithRifle : MonoBehaviour
 
     void FixedUpdate()
     {
-        //andar
-        rb.velocity = new Vector2(move * moveSpeed, rb.velocity.y);
-        //pulo
-
-        if (running)
+        if (!isReloading)
         {
-            rb.velocity = new Vector2(move * runSpeed, rb.velocity.y);
-        }
+            //andar
+            rb.velocity = new Vector2(move * moveSpeed, rb.velocity.y);
+            //pulo
 
-        if (jumping)
-        {
-            rb.velocity = Vector2.up * jumpSpeed;
+            if (running)
+            {
+                rb.velocity = new Vector2(move * runSpeed, rb.velocity.y);
+            }
 
-            jumping = false;
+            if (jumping)
+            {
+                rb.velocity = Vector2.up * jumpSpeed;
+
+                jumping = false;
+            }
         }
+        
+    }
+
+    void ChangeAnimationState(string newAnimation)
+    {
+        if (currentAnimation == newAnimation) return;
+        animator.Play(newAnimation);
+        currentAnimation = newAnimation;
     }
 }
