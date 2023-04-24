@@ -1,17 +1,23 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.PlasticSCM.Editor.WebApi;
 using Unity.VisualScripting;
 using UnityEditor.VersionControl;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    private float move;
+
+    private Animator animator;
+    private string currentAnimation;
+
+    public float move;
     [SerializeField] private bool rifleBool = false;
     [SerializeField] private Transform rifle;
     [SerializeField] private GameObject PlayerRifle;
- 
+    private PlayerWithRifle playerUseRifle;
+    private PlayerMovement playerHands;
 
     [SerializeField] private float moveSpeed = 2f;
     [SerializeField] private float runSpeed = 5f;
@@ -27,97 +33,92 @@ public class PlayerMovement : MonoBehaviour
     public Vector2 sizeCapsule;
     [SerializeField] private float angleCapsule;
     public LayerMask whatIsGround;
-    bool facingRight = true;
-
+    
     public GameObject DisplayMessage;
-  
+
+    public bool playerPickedRifle = false;
+
+
 
     Rigidbody2D rb;
     SpriteRenderer sprite;
-    Animator animationPlayer;
 
+   
+    const string PLAYER_IDLE = "IdleMain";
+    const string PLAYER_WALK = "Walk";
+    const string PLAYER_RUN = "Running";
+    const string PLAYER_JUMPH = "JumpingH";
+    const string PLAYER_FALLH = "FallingH";
+    const string PLAYER_JUMPV = "JumpingV";
+    const string PLAYER_FALLV = "FallingV";
+    const string PLAYER_PICKR = "PickRifle";
+
+
+    
     public void walking()
     {
+        moveSpeed = 2f;
+        runSpeed = 5f;
         if (isGrounded && running == false)
         {
-            animationPlayer.SetBool("Running", false);
-            animationPlayer.SetBool("Walking", false);
-            animationPlayer.SetBool("JumpingV", false);
-            animationPlayer.SetBool("JumpingH", false);
-            animationPlayer.SetBool("FallingV", false);
-            animationPlayer.SetBool("FallingH", false);
 
             if (rb.velocity.x != 0 && move != 0)
             {
-                animationPlayer.SetBool("Walking", true);
+                ChangeAnimationState(PLAYER_WALK);
+
             }
             else
             {
-                animationPlayer.SetBool("Walking", false);
+                ChangeAnimationState(PLAYER_IDLE);
             }
         }
         if (running == true)
         {
             if (isGrounded)
             {
-                animationPlayer.SetBool("Running", false);
-                animationPlayer.SetBool("Walking", false);
-                animationPlayer.SetBool("JumpingV", false);
-                animationPlayer.SetBool("JumpingH", false);
-                animationPlayer.SetBool("FallingV", false);
-                animationPlayer.SetBool("FallingH", false);
 
                 if (rb.velocity.x != 0 && move != 0)
                 {
-                    animationPlayer.SetBool("Running", true);
+                    ChangeAnimationState(PLAYER_RUN);
                 }
+
                 else
                 {
-                    animationPlayer.SetBool("Running", false);
-                    animationPlayer.SetBool("Walking", false);
+                    ChangeAnimationState(PLAYER_IDLE);
                 }
             }
         }
     }
 
-   
+
 
     public void jump()
     {
         if (rb.velocity.x == 0)
         {
-            animationPlayer.SetBool("Walking", false);
-
+            //Pulo Vertical
             if (rb.velocity.y > 0)
             {
-                animationPlayer.SetBool("JumpingV", true);
-                animationPlayer.SetBool("JumpingH", false);
-                animationPlayer.SetBool("FallingV", false);
-                animationPlayer.SetBool("FallingH", false);
+                ChangeAnimationState(PLAYER_JUMPV);
             }
+            //Queda Vertical
             if (rb.velocity.y < 0)
             {
-                animationPlayer.SetBool("JumpingV", false);
-                animationPlayer.SetBool("JumpingH", false);
-                animationPlayer.SetBool("FallingV", true);
-                animationPlayer.SetBool("FallingH", false);
+                ChangeAnimationState(PLAYER_FALLV);
             }
         }
         else
         {
+            //Pulo Horizontal
             if (rb.velocity.y > 0 && rb.velocity.x != 0)
             {
-                animationPlayer.SetBool("JumpingV", false);
-                animationPlayer.SetBool("JumpingH", true);
-                animationPlayer.SetBool("FallingV", false);
-                animationPlayer.SetBool("FallingH", false);
+                ChangeAnimationState(PLAYER_JUMPH);
             }
+            //Queda Horizontal
             if (rb.velocity.y < 0)
             {
-                animationPlayer.SetBool("JumpingV", false);
-                animationPlayer.SetBool("JumpingH", false);
-                animationPlayer.SetBool("FallingV", false);
-                animationPlayer.SetBool("FallingH", true);
+                ChangeAnimationState(PLAYER_FALLH);
+
             }
         }
     }
@@ -128,10 +129,11 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
-        animationPlayer = GetComponent<Animator>();
-
+        animator = GetComponent<Animator>();
         sizeCapsule = new Vector2(0.13f, -0.01f);
         angleCapsule = -90f;
+       
+
     }
 
     // Update is called once per frame
@@ -143,7 +145,11 @@ public class PlayerMovement : MonoBehaviour
 
             isGrounded = Physics2D.OverlapCapsule(feetPosition.position, sizeCapsule, CapsuleDirection2D.Horizontal, angleCapsule, whatIsGround);
 
-            move = Input.GetAxis("Horizontal");
+            move = gameObject.GetComponent<MoveRightOrLeft>().direction;
+
+            //animação idle
+
+
 
             //input do pulo do personagem
 
@@ -153,16 +159,7 @@ public class PlayerMovement : MonoBehaviour
             }
 
             // inverter posição boneco
-            if (move < 0 && facingRight)
-            {
-                flip();
-            }
-            else if (move > 0 && !facingRight)
-            {
-                flip();
-            }
-
-
+          
             //Animação boneco
 
             if (isGrounded)
@@ -206,22 +203,16 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 rifleBool = true;
-                animationPlayer.SetBool("Walking", false);
-                animationPlayer.SetBool("PickRifle", true);
-                sprite.flipX = false;
-                rb.constraints = RigidbodyConstraints2D.FreezePosition;
-                rb.constraints = RigidbodyConstraints2D.FreezeRotation;
-                transform.position = rifle.position;
+                ChangeAnimationState(PLAYER_PICKR);
+                move= 0;
+                rb.velocity = new Vector2(0,0);
+                transform.rotation = rifle.rotation;
             }
            
         }
     }
 
-    void flip()
-    {
-        transform.Rotate(0f, 180f, 0f);
-        facingRight = !facingRight;
-    }
+   
 
     private void OnDrawGizmosSelected()
     {
@@ -275,12 +266,17 @@ public class PlayerMovement : MonoBehaviour
         Destroy(rifle.gameObject);
     }
 
-    void DestroyPlayer()
+    void PlayerPickedRifle()
     {
-        Instantiate(PlayerRifle, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
-       
-        Destroy(gameObject);
-        Destroy(transform.parent.gameObject);
+        rifleBool = false;
+        playerPickedRifle = true;
+    }
+
+    void ChangeAnimationState(string newAnimation)
+    {
+        if (currentAnimation == newAnimation) return;
+        animator.Play(newAnimation);
+        currentAnimation = newAnimation;
     }
 
 }

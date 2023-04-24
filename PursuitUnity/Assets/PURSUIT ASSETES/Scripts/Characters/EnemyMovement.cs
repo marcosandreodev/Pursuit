@@ -17,7 +17,7 @@ public class EnemyMovement : MonoBehaviour
     {
         if (isChasing)
         {
-            moveSpeed = 2;
+            moveSpeed = 2f;
 
             if (transform.position.x > playerTransform.position.x)
             {
