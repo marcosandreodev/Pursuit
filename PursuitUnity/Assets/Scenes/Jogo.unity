@@ -258,7 +258,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!95 &194511237
 Animator:
   serializedVersion: 5
@@ -1249,7 +1249,7 @@ MonoBehaviour:
   bulletPrefarb: {fileID: 4217937671331539627, guid: 6fa436171d24a254bb0241d891541e0f, type: 3}
   playerPrefarb: {fileID: 489360341}
   move: 0
-  firerate: 0.15
+  firerate: 0.13
   bullets: 14
   isReloading: 0
 --- !u!114 &489360348

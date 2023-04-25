@@ -11,7 +11,7 @@ public class Weapon : MonoBehaviour
     public float move;
     public float firerate;
     float nextfire;
-    public int bullets = 32;
+    public int bullets = 14;
     public bool isReloading = false;
 
 
@@ -32,7 +32,7 @@ public class Weapon : MonoBehaviour
     }
     void Update()
     {
-        if (bullets == 0 && Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.R))
         {
             Reload();
         }
@@ -65,6 +65,6 @@ public class Weapon : MonoBehaviour
     
     void Reload()
     {
-        bullets = 32;
+        bullets = 14;
     }
 }
