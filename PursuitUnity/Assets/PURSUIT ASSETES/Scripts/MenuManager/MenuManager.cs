@@ -53,9 +53,9 @@ public class MenuManager : MonoBehaviour
     {
         switch (dificuldade)
         {
-            case 1: legenda.sprite = Resources.Load<Sprite>("Menu/Facil"); break;
-            case 2: legenda.sprite = Resources.Load<Sprite>("Menu/medio"); break;
-            case 3: legenda.sprite = Resources.Load<Sprite>("Menu/dificil"); break;
+            case 1: legenda.sprite = Resources.Load<Sprite>("MenuOficial/facil"); break;
+            case 2: legenda.sprite = Resources.Load<Sprite>("MenuOficial/medio"); break;
+            case 3: legenda.sprite = Resources.Load<Sprite>("MenuOficial/dificil"); break;
         }
     }
 

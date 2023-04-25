@@ -5,6 +5,7 @@ using Unity.PlasticSCM.Editor.WebApi;
 using Unity.VisualScripting;
 using UnityEditor.VersionControl;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -38,6 +39,10 @@ public class PlayerMovement : MonoBehaviour
 
     public bool playerPickedRifle = false;
 
+    public Image swap;
+    [SerializeField] private GameObject Bar;
+    [SerializeField] private GameObject ShadowBar;
+    [SerializeField] private GameObject AMmoBar;
 
 
     Rigidbody2D rb;
@@ -207,6 +212,11 @@ public class PlayerMovement : MonoBehaviour
                 move= 0;
                 rb.velocity = new Vector2(0,0);
                 transform.rotation = rifle.rotation;
+                swap.sprite = Resources.Load<Sprite>("CH/SwapRifle");
+                Bar.SetActive(true);
+                ShadowBar.SetActive(true);
+                AMmoBar.SetActive(true);
+
             }
            
         }
@@ -261,7 +271,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-     void DestroyRifle()
+     void DestroyRifle(Transform rifle)
     {
         Destroy(rifle.gameObject);
     }

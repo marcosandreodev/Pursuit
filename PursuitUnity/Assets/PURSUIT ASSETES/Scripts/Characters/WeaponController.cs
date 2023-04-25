@@ -4,6 +4,7 @@ using Unity.VisualScripting;
 using UnityEditor.VersionControl;
 using UnityEngine;
 using UnityEngine.TextCore.Text;
+using UnityEngine.UI;
 
 public class WeaponController : MonoBehaviour
 {
@@ -13,8 +14,12 @@ public class WeaponController : MonoBehaviour
     public bool isWithRifle;
     public bool IsWithHands;
     bool changedGun;
+    public Image Swap;
+    [SerializeField] private GameObject Bar;
+    [SerializeField] private GameObject ShadowBar;
+    [SerializeField] private GameObject AMmoBar;
 
-    
+
 
 
     //fazer logica para verificar se isHands
@@ -35,13 +40,20 @@ public class WeaponController : MonoBehaviour
         {
             changedGun = true;
             rifle();
+            Swap.sprite = Resources.Load<Sprite>("CH/SwapRifle");
+            Bar.SetActive(true);
+            ShadowBar.SetActive(true);
+            AMmoBar.SetActive(true);
         }
         //enable hands
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             changedGun = true;
             hands();
-            
+            Swap.sprite = Resources.Load<Sprite>("CH/SwapMão");
+            Bar.SetActive(false);
+            ShadowBar.SetActive(false);
+            AMmoBar.SetActive(false);
         }
        
     }

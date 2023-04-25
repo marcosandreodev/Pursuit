@@ -9,6 +9,7 @@ public class PauseMenu : MonoBehaviour
     public Transform pauseMenu;
     [SerializeField] private string NomeLevel;
     [SerializeField] private string NomeCena1;
+    [SerializeField] private string NomeRestart;
 
     // Start is called before the first frame update
     void Start()
@@ -43,5 +44,9 @@ public class PauseMenu : MonoBehaviour
     {
         SceneManager.LoadScene(NomeLevel);
         
+    }
+    public void RestarGame()
+    {
+        SceneManager.LoadScene(NomeRestart);
     }
 }

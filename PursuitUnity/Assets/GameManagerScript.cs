@@ -26,7 +26,11 @@ public class GameManagerScript : MonoBehaviour
 
     public void MainMenu()
     {
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene("MenuOficial");
 
+    }
+    public void RestartGame()
+    {
+        SceneManager.LoadScene("Jogo");
     }
 }
