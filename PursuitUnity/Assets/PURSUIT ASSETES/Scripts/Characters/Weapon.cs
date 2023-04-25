@@ -11,7 +11,7 @@ public class Weapon : MonoBehaviour
     public float move;
     public float firerate;
     float nextfire;
-    public int bullets = 32;
+    public int bullets = 14;
     public bool isReloading = false;
 
 
@@ -28,11 +28,11 @@ public class Weapon : MonoBehaviour
                 Shoot();
             }
         }
-        
+
     }
     void Update()
     {
-        if (bullets == 0 && Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.R))
         {
             Reload();
         }
@@ -48,7 +48,7 @@ public class Weapon : MonoBehaviour
                 Instantiate(bulletPrefarb, firePoint.position, firePoint.rotation);
                 bullets -= 1;
             }
-            
+
         }
 
     }
@@ -62,9 +62,9 @@ public class Weapon : MonoBehaviour
     {
         isReloading = true;
     }
-    
+
     void Reload()
     {
-        bullets = 32;
+        bullets = 14;
     }
 }

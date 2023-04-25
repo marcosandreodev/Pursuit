@@ -185,8 +185,9 @@ public class PlayerWithRifle : MonoBehaviour
             isShooting = false;
         }
         if (isShooting)
-        {
+        {         
             Shooting();
+
         }
         if (Input.GetKeyDown(KeyCode.R))
         {
