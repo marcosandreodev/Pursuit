@@ -40,6 +40,7 @@ public class WeaponController : MonoBehaviour
         {
             changedGun = true;
             rifle();
+
             Swap.sprite = Resources.Load<Sprite>("CH/SwapRifle");
             Bar.SetActive(true);
             ShadowBar.SetActive(true);
@@ -50,6 +51,7 @@ public class WeaponController : MonoBehaviour
         {
             changedGun = true;
             hands();
+
             Swap.sprite = Resources.Load<Sprite>("CH/SwapMão");
             Bar.SetActive(false);
             ShadowBar.SetActive(false);
@@ -57,7 +59,6 @@ public class WeaponController : MonoBehaviour
         }
        
     }
-
     void firstRifle()
     {
         rifle();
@@ -70,7 +71,7 @@ public class WeaponController : MonoBehaviour
         weapon.enabled = true;
 
 
-        isWithRifle=true;
+        isWithRifle = true;
         IsWithHands = false;
     }
 
@@ -80,7 +81,7 @@ public class WeaponController : MonoBehaviour
         playerUseRifle.enabled = false;
         playerHands.enabled = true;
         weapon.enabled = false;
-        
+
 
         isWithRifle = false;
         IsWithHands = true;

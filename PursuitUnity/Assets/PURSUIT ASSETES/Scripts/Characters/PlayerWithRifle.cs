@@ -10,7 +10,7 @@ public class PlayerWithRifle : MonoBehaviour
     [SerializeField] private float runSpeed = 5f;
     private bool jumping;
     private bool running;
-    [SerializeField] private float jumpSpeed = 7f;
+    [SerializeField] private float jumpSpeed = 4f;
 
     [SerializeField] private float ghostJump;
 
@@ -22,7 +22,7 @@ public class PlayerWithRifle : MonoBehaviour
     public LayerMask whatIsGround;
     bool facingRight = true;
     public bool isShooting = false;
-    public bool isReloading =false;
+    public bool isReloading = false;
 
     public GameObject DisplayMessage;
 
@@ -42,7 +42,8 @@ public class PlayerWithRifle : MonoBehaviour
     const string PLAYER_RELOAD = "Reload";
     const string PLAYER_SHOOT = "Shoot";
 
-    public void StopReloading() {
+    public void StopReloading()
+    {
 
         if (Input.GetButton("Fire1"))
         {
@@ -51,17 +52,17 @@ public class PlayerWithRifle : MonoBehaviour
         isReloading = false;
         moveSpeed = 2f;
         runSpeed = 5f;
-        
+
     }
 
     public void Shooting()
     {
         ChangeAnimationState(PLAYER_SHOOT);
         moveSpeed = 2f;
-        runSpeed = 5f;    
+        runSpeed = 5f;
     }
 
-    
+
     public void walking()
     {
         moveSpeed = 2f;
@@ -94,11 +95,11 @@ public class PlayerWithRifle : MonoBehaviour
 
                 else
                 {
-                    if(!isShooting)
+                    if (!isShooting)
                     {
                         ChangeAnimationState(PLAYER_IDLE);
                     }
-                   
+
                 }
             }
         }
@@ -152,19 +153,19 @@ public class PlayerWithRifle : MonoBehaviour
     {
         //Reconhecer o chão
 
-        isGrounded= Physics2D.OverlapCapsule(feetPosition.position, sizeCapsule, CapsuleDirection2D.Horizontal, angleCapsule, whatIsGround);
+        isGrounded = Physics2D.OverlapCapsule(feetPosition.position, sizeCapsule, CapsuleDirection2D.Horizontal, angleCapsule, whatIsGround);
 
         move = gameObject.GetComponent<MoveRightOrLeft>().direction;
 
         //input do pulo do personagem
 
-        if (Input.GetButtonDown("Jump") && ghostJump >0)
+        if (Input.GetButtonDown("Jump") && ghostJump > 0)
         {
-            jumping=true; 
+            jumping = true;
         }
 
         // inverter posição boneco
-       
+
 
         if (Input.GetButtonDown("Fire1") && move == 0 && !jumping)
 
@@ -196,7 +197,7 @@ public class PlayerWithRifle : MonoBehaviour
             move = 0;
             isShooting = false;
         }
-        
+
         //Animação boneco
 
         if (isGrounded)
@@ -233,7 +234,7 @@ public class PlayerWithRifle : MonoBehaviour
         }
     }
 
-   
+
 
     void OnDrawGizmosSelected()
     {
@@ -261,7 +262,7 @@ public class PlayerWithRifle : MonoBehaviour
                 jumping = false;
             }
         }
-        
+
     }
 
     void ChangeAnimationState(string newAnimation)

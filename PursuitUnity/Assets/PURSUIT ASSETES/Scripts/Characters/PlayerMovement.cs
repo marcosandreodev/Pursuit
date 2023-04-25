@@ -5,7 +5,6 @@ using Unity.PlasticSCM.Editor.WebApi;
 using Unity.VisualScripting;
 using UnityEditor.VersionControl;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -34,21 +33,17 @@ public class PlayerMovement : MonoBehaviour
     public Vector2 sizeCapsule;
     [SerializeField] private float angleCapsule;
     public LayerMask whatIsGround;
-    
+
     public GameObject DisplayMessage;
 
     public bool playerPickedRifle = false;
 
-    public Image swap;
-    [SerializeField] private GameObject Bar;
-    [SerializeField] private GameObject ShadowBar;
-    [SerializeField] private GameObject AMmoBar;
 
 
     Rigidbody2D rb;
     SpriteRenderer sprite;
 
-   
+
     const string PLAYER_IDLE = "IdleMain";
     const string PLAYER_WALK = "Walk";
     const string PLAYER_RUN = "Running";
@@ -59,7 +54,7 @@ public class PlayerMovement : MonoBehaviour
     const string PLAYER_PICKR = "PickRifle";
 
 
-    
+
     public void walking()
     {
         moveSpeed = 2f;
@@ -137,7 +132,7 @@ public class PlayerMovement : MonoBehaviour
         animator = GetComponent<Animator>();
         sizeCapsule = new Vector2(0.13f, -0.01f);
         angleCapsule = -90f;
-       
+
 
     }
 
@@ -164,7 +159,7 @@ public class PlayerMovement : MonoBehaviour
             }
 
             // inverter posição boneco
-          
+
             //Animação boneco
 
             if (isGrounded)
@@ -174,8 +169,8 @@ public class PlayerMovement : MonoBehaviour
                 walking();
                 if (Input.GetKeyDown(KeyCode.LeftShift))
                 {
-                    running=true;
-                    
+                    running = true;
+
                 }
                 if (Input.GetKeyUp(KeyCode.LeftShift))
                 {
@@ -201,7 +196,7 @@ public class PlayerMovement : MonoBehaviour
                 jump();
             }
         }
-        if( isTriggered == true)
+        if (isTriggered == true)
         {
             DisplayMessage.SetActive(true);
 
@@ -209,20 +204,15 @@ public class PlayerMovement : MonoBehaviour
             {
                 rifleBool = true;
                 ChangeAnimationState(PLAYER_PICKR);
-                move= 0;
-                rb.velocity = new Vector2(0,0);
+                move = 0;
+                rb.velocity = new Vector2(0, 0);
                 transform.rotation = rifle.rotation;
-                swap.sprite = Resources.Load<Sprite>("CH/SwapRifle");
-                Bar.SetActive(true);
-                ShadowBar.SetActive(true);
-                AMmoBar.SetActive(true);
-
             }
-           
+
         }
     }
 
-   
+
 
     private void OnDrawGizmosSelected()
     {
@@ -248,13 +238,13 @@ public class PlayerMovement : MonoBehaviour
                 rb.velocity = Vector2.up * jumpSpeed;
 
                 jumping = false;
-                
+
             }
         }
     }
     private void OnTriggerEnter2D(Collider2D coll)
     {
-        if(coll.gameObject.tag == "Rifle" && isGrounded)
+        if (coll.gameObject.tag == "Rifle" && isGrounded)
         {
             isTriggered = true;
         }
@@ -271,7 +261,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-     void DestroyRifle(Transform rifle)
+    void DestroyRifle()
     {
         Destroy(rifle.gameObject);
     }
