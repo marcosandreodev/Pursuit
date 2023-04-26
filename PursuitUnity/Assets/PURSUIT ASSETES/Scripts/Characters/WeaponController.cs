@@ -18,6 +18,7 @@ public class WeaponController : MonoBehaviour
     [SerializeField] private GameObject Bar;
     [SerializeField] private GameObject ShadowBar;
     [SerializeField] private GameObject AMmoBar;
+    [SerializeField] private GameObject AmmoIcon;
 
 
 
@@ -45,6 +46,7 @@ public class WeaponController : MonoBehaviour
             Bar.SetActive(true);
             ShadowBar.SetActive(true);
             AMmoBar.SetActive(true);
+            AmmoIcon.SetActive(true);
         }
         //enable hands
         if (Input.GetKeyDown(KeyCode.Alpha1))
@@ -56,6 +58,7 @@ public class WeaponController : MonoBehaviour
             Bar.SetActive(false);
             ShadowBar.SetActive(false);
             AMmoBar.SetActive(false);
+            AmmoIcon.SetActive(false);
         }
        
     }
