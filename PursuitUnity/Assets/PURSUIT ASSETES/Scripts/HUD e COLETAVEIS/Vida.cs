@@ -27,8 +27,8 @@ public class Vida : MonoBehaviour
         {
             if (other.gameObject.CompareTag("Player"))
             {
-                other.gameObject.GetComponent<PlayerHealth>().health += vida;
                 DestroySpray();
+                other.gameObject.GetComponent<PlayerHealth>().health += vida;
             }
 
             else other.gameObject.GetComponent<PlayerHealth>().health = 100;
