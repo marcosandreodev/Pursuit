@@ -176,6 +176,10 @@ public class PlayerWithRifle : MonoBehaviour
         {
             isAtacking = true;
         }
+        if (Input.GetButton("Fire1") && move != 0)
+        {
+            isAtacking = false;
+        }
         if (Input.GetButtonUp("Fire1"))
         {
             isAtacking = false;

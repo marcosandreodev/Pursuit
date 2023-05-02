@@ -98,6 +98,11 @@ public class WeaponController : MonoBehaviour
             Bar.SetActive(false);
             ShadowBar.SetActive(false);
             AMmoBar.SetActive(false);
+
+            BarE.SetActive(false);
+            ShadowBarE.SetActive(false);
+            EnergyBar.SetActive(false);
+            EnergyIcon.SetActive(false);
             AmmoIcon.SetActive(false);
         }
     }
@@ -110,6 +115,7 @@ public class WeaponController : MonoBehaviour
     {
         playerHands.enabled = false;
         playerUseRifle.enabled = true;
+        playerUseSword.enabled = false;
         weapon.enabled = true;
 
 
@@ -123,6 +129,7 @@ public class WeaponController : MonoBehaviour
     {
         playerUseRifle.enabled = false;
         playerHands.enabled = true;
+        playerUseSword.enabled = false;
         weapon.enabled = false;
 
 
