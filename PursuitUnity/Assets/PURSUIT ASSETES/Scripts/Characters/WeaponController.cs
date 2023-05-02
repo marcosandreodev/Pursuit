@@ -61,7 +61,7 @@ public class WeaponController : MonoBehaviour
             ShadowBar.SetActive(false);
             AMmoBar.SetActive(false);
             AmmoIcon.SetActive(false);
-
+           
             BarE.SetActive(true);
             ShadowBarE.SetActive(true);
             EnergyBar.SetActive(true);
@@ -115,6 +115,7 @@ public class WeaponController : MonoBehaviour
 
         isWithRifle = true;
         IsWithHands = false;
+        isWithSword = false;
     }
 
 
@@ -127,6 +128,7 @@ public class WeaponController : MonoBehaviour
 
         isWithRifle = false;
         IsWithHands = true;
+        isWithSword = false;
     }
     void Sword()
     {
