@@ -21,7 +21,7 @@ public class PlayerWithRifle : MonoBehaviour
     [SerializeField] private float angleCapsule;
     public LayerMask whatIsGround;
     bool facingRight = true;
-    public bool isShooting = false;
+    public bool isAtacking = false;
     public bool isReloading = false;
 
     public GameObject DisplayMessage;
@@ -67,7 +67,7 @@ public class PlayerWithRifle : MonoBehaviour
     {
         moveSpeed = 2f;
         runSpeed = 5f;
-        if (isGrounded && running == false && isReloading == false && isShooting == false)
+        if (isGrounded && running == false && isReloading == false && isAtacking == false)
         {
 
             if (rb.velocity.x != 0 && move != 0)
@@ -77,13 +77,13 @@ public class PlayerWithRifle : MonoBehaviour
             }
             else
             {
-                if (!isShooting && !isReloading)
+                if (!isAtacking && !isReloading)
                 {
                     ChangeAnimationState(PLAYER_IDLE);
                 }
             }
         }
-        if (running == true && isReloading == false && isShooting == false)
+        if (running == true && isReloading == false && isAtacking == false)
         {
             if (isGrounded)
             {
@@ -95,7 +95,7 @@ public class PlayerWithRifle : MonoBehaviour
 
                 else
                 {
-                    if (!isShooting)
+                    if (!isAtacking)
                     {
                         ChangeAnimationState(PLAYER_IDLE);
                     }
@@ -170,21 +170,21 @@ public class PlayerWithRifle : MonoBehaviour
         if (Input.GetButtonDown("Fire1") && move == 0 && !jumping)
 
         {
-            isShooting = true;
+            isAtacking = true;
         }
         if (Input.GetButton("Fire1") && !isReloading && move == 0 && !jumping)
         {
-            isShooting = true;
+            isAtacking = true;
         }
         if (Input.GetButtonUp("Fire1"))
         {
-            isShooting = false;
+            isAtacking = false;
         }
         if (isReloading && Input.GetButtonDown("Fire1"))
         {
-            isShooting = false;
+            isAtacking = false;
         }
-        if (isShooting)
+        if (isAtacking)
         {         
             Shooting();
 
@@ -196,7 +196,7 @@ public class PlayerWithRifle : MonoBehaviour
             moveSpeed = 0f;
             runSpeed = 0f;
             move = 0;
-            isShooting = false;
+            isAtacking = false;
         }
 
         //Animação boneco

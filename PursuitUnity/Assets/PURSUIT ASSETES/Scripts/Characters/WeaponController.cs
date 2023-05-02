@@ -26,8 +26,12 @@ public class WeaponController : MonoBehaviour
     [SerializeField] private GameObject ShadowBarE;
     [SerializeField] private GameObject EnergyBar;
     [SerializeField] private GameObject EnergyIcon;
+    private Animator animator;
+    private string currentAnimation;
 
-
+    const string PLAYER_IDLE_SWORD = "ChangeToSword";
+    const string PLAYER_IDLE_HANDS = "IdleMain";
+    const string PLAYER_IDLE_RIFLE = "IdleMainRifle";
 
 
     //fazer logica para verificar se isHands
@@ -37,6 +41,8 @@ public class WeaponController : MonoBehaviour
     {
         playerUseRifle = GetComponent<PlayerWithRifle>();
         playerHands = GetComponent<PlayerMovement>();
+        playerUseSword = GetComponent<PlayerWithSword>();
+        animator = GetComponent<Animator>();
         weapon = GetComponent<Weapon>();
        
     }
@@ -46,6 +52,7 @@ public class WeaponController : MonoBehaviour
         //enable sword
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
+            ChangeAnimationState(PLAYER_IDLE_SWORD);
             changedGun = true;
             Sword();
 
@@ -64,6 +71,7 @@ public class WeaponController : MonoBehaviour
         //enable rifle
         if (Input.GetKeyDown(KeyCode.Alpha2) && playerHands.playerPickedRifle)
         {
+            ChangeAnimationState(PLAYER_IDLE_RIFLE);
             changedGun = true;
             rifle();
 
@@ -82,6 +90,7 @@ public class WeaponController : MonoBehaviour
         //enable hands
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
+            ChangeAnimationState(PLAYER_IDLE_HANDS);
             changedGun = true;
             hands();
 
@@ -122,11 +131,21 @@ public class WeaponController : MonoBehaviour
     void Sword()
     {
         playerHands.enabled = false;
+        playerUseRifle.enabled = false;
         playerUseSword.enabled = true;
-        weapon.enabled = true;
+        weapon.enabled = false;
 
 
         isWithSword = true;
+        isWithRifle = false;
         IsWithHands = false;
+    }
+
+
+    void ChangeAnimationState(string newAnimation)
+    {
+        if (currentAnimation == newAnimation) return;
+        animator.Play(newAnimation);
+        currentAnimation = newAnimation;
     }
 }
