@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
-
+using UnityEngine.UI;
 
 public class Weapon : MonoBehaviour
 {
@@ -11,11 +12,25 @@ public class Weapon : MonoBehaviour
     public float move;
     public float firerate;
     float nextfire;
-    public int bullets = 14;
+    public Weapon pammo;
+
+
+
+    public float bullets = 14;
+    public float MaxBulets;
+    public Image Bar;
+    public float BarDamage;
+
+
+
     public bool isReloading = false;
 
+    public GameObject CanvaR;
 
-
+    void Start()
+    {
+        MaxBulets = bullets;
+    }
 
     // Update is called once per frame
     void FixedUpdate()
@@ -26,15 +41,18 @@ public class Weapon : MonoBehaviour
             if (Input.GetButton("Fire1"))
             {
                 Shoot();
+                Bar.fillAmount = Mathf.Clamp(bullets / MaxBulets, 0, 14);
             }
         }
 
     }
     void Update()
     {
+
         if (Input.GetKeyDown(KeyCode.R))
         {
             Reload();
+            CanvaR.SetActive(false);
         }
     }
 
@@ -48,8 +66,13 @@ public class Weapon : MonoBehaviour
                 Instantiate(bulletPrefarb, firePoint.position, firePoint.rotation);
                 bullets -= 1;
             }
-
         }
+        if (bullets == 0)
+        {
+            CanvaR.SetActive(true);
+        }
+
+
 
     }
 
@@ -66,5 +89,6 @@ public class Weapon : MonoBehaviour
     void Reload()
     {
         bullets = 14;
+        Bar.fillAmount = Mathf.Clamp(bullets / MaxBulets, 14, 14);
     }
 }

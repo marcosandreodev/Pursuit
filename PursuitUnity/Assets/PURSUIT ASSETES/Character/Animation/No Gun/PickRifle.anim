@@ -97,15 +97,15 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0
-    functionName: PlayerPickedRifle
+  - time: 0.8888889
+    functionName: firstRifle
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 0.8888889
-    functionName: firstRifle
+    functionName: PlayerPickedRifle
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

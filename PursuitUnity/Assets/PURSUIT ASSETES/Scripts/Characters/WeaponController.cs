@@ -10,14 +10,22 @@ public class WeaponController : MonoBehaviour
 {
     private PlayerWithRifle playerUseRifle;
     private PlayerMovement playerHands;
+    private PlayerWithSword playerUseSword;
     private Weapon weapon;
     public bool isWithRifle;
     public bool IsWithHands;
+    public bool isWithSword;
     bool changedGun;
     public Image Swap;
     [SerializeField] private GameObject Bar;
     [SerializeField] private GameObject ShadowBar;
     [SerializeField] private GameObject AMmoBar;
+    [SerializeField] private GameObject AmmoIcon;
+
+    [SerializeField] private GameObject BarE;
+    [SerializeField] private GameObject ShadowBarE;
+    [SerializeField] private GameObject EnergyBar;
+    [SerializeField] private GameObject EnergyIcon;
 
 
 
@@ -35,6 +43,24 @@ public class WeaponController : MonoBehaviour
 
     void Update()
     {
+        //enable sword
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            changedGun = true;
+            Sword();
+
+            Swap.sprite = Resources.Load<Sprite>("CH/SwapEspada");
+            Bar.SetActive(false);
+            ShadowBar.SetActive(false);
+            AMmoBar.SetActive(false);
+            AmmoIcon.SetActive(false);
+
+            BarE.SetActive(true);
+            ShadowBarE.SetActive(true);
+            EnergyBar.SetActive(true);
+            EnergyIcon.SetActive(true);
+        }
+
         //enable rifle
         if (Input.GetKeyDown(KeyCode.Alpha2) && playerHands.playerPickedRifle)
         {
@@ -45,7 +71,14 @@ public class WeaponController : MonoBehaviour
             Bar.SetActive(true);
             ShadowBar.SetActive(true);
             AMmoBar.SetActive(true);
+            AmmoIcon.SetActive(true);
+
+            BarE.SetActive(false);
+            ShadowBarE.SetActive(false);
+            EnergyBar.SetActive(false);
+            EnergyIcon.SetActive(false);
         }
+
         //enable hands
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
@@ -56,8 +89,8 @@ public class WeaponController : MonoBehaviour
             Bar.SetActive(false);
             ShadowBar.SetActive(false);
             AMmoBar.SetActive(false);
+            AmmoIcon.SetActive(false);
         }
-       
     }
     void firstRifle()
     {
@@ -85,5 +118,15 @@ public class WeaponController : MonoBehaviour
 
         isWithRifle = false;
         IsWithHands = true;
+    }
+    void Sword()
+    {
+        playerHands.enabled = false;
+        playerUseSword.enabled = true;
+        weapon.enabled = true;
+
+
+        isWithSword = true;
+        IsWithHands = false;
     }
 }
