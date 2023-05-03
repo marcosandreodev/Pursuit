@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class PlayerWithSword : MonoBehaviour
 {
     private float move;
+    private SwordDamage swordDamage;
 
     [SerializeField] private float moveSpeed = 2f;
     [SerializeField] private float runSpeed = 5f;
@@ -26,6 +27,8 @@ public class PlayerWithSword : MonoBehaviour
     public bool isReloading = false;
 
 
+
+
     public GameObject DisplayMessage;
 
 
@@ -44,15 +47,16 @@ public class PlayerWithSword : MonoBehaviour
     const string PLAYER_ATACK = "AtackSword";
     const string PLAYER_PICKR = "PickRifle";
 
-
-
-    public Image Swap;
-    [SerializeField] private GameObject Bar;
-    [SerializeField] private GameObject ShadowBar;
-    [SerializeField] private GameObject AMmoBar;
-    [SerializeField] private GameObject AmmoIcon;
     [SerializeField] private Transform rifle;
     [SerializeField] private bool rifleBool = false;
+    [SerializeField] private GameObject SwordRange;
+
+    
+    public float MaxEnergy;
+    public Image BarE;
+    public float BarDamage;
+    public float ActualEnergy;
+
 
 
     public void StopReloading()
@@ -152,6 +156,8 @@ public class PlayerWithSword : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        swordDamage = GetComponent<SwordDamage>();
+        MaxEnergy = 4;
         rb = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
@@ -180,7 +186,7 @@ public class PlayerWithSword : MonoBehaviour
 
 
         if (Input.GetButtonDown("Fire1") && move == 0 && !jumping)
-        {
+        { 
             isAtacking = true;
         }
         if (Input.GetButton("Fire1") && move != 0)
@@ -193,9 +199,15 @@ public class PlayerWithSword : MonoBehaviour
         }
         if (isAtacking)
         {
+            BarE.fillAmount = Mathf.Clamp(ActualEnergy / MaxEnergy, 0, 4);
+            SwordRange.SetActive(true);
             Shooting();
 
         }
+        if (!isAtacking)
+        {
+            SwordRange.SetActive(false);
+          }
         if (Input.GetKeyDown(KeyCode.R))
         {
             isReloading = true;
@@ -242,8 +254,6 @@ public class PlayerWithSword : MonoBehaviour
         }
         if (isTriggered == true)
         {
-            DisplayMessage.SetActive(true);
-
             if (Input.GetKeyDown(KeyCode.E))
             {
                 rifleBool = true;
@@ -251,11 +261,6 @@ public class PlayerWithSword : MonoBehaviour
                 move = 0;
                 rb.velocity = new Vector2(0, 0);
                 transform.rotation = rifle.rotation;
-                Swap.sprite = Resources.Load<Sprite>("CH/SwapRifle");
-                Bar.SetActive(true);
-                ShadowBar.SetActive(true);
-                AMmoBar.SetActive(true);
-                AmmoIcon.SetActive(true);
             }
 
         }

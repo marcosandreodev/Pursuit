@@ -22,10 +22,12 @@ public class WeaponController : MonoBehaviour
     [SerializeField] private GameObject AMmoBar;
     [SerializeField] private GameObject AmmoIcon;
 
+
     [SerializeField] private GameObject BarE;
     [SerializeField] private GameObject ShadowBarE;
     [SerializeField] private GameObject EnergyBar;
     [SerializeField] private GameObject EnergyIcon;
+    [SerializeField] private GameObject SwordRange;
     private Animator animator;
     private string currentAnimation;
 
@@ -66,6 +68,7 @@ public class WeaponController : MonoBehaviour
             ShadowBarE.SetActive(true);
             EnergyBar.SetActive(true);
             EnergyIcon.SetActive(true);
+            
         }
 
         //enable rifle
@@ -90,6 +93,8 @@ public class WeaponController : MonoBehaviour
             ShadowBarE.SetActive(false);
             EnergyBar.SetActive(false);
             EnergyIcon.SetActive(false);
+
+            SwordRange.SetActive(false);
         }
 
         //enable hands
@@ -109,6 +114,8 @@ public class WeaponController : MonoBehaviour
             EnergyBar.SetActive(false);
             EnergyIcon.SetActive(false);
             AmmoIcon.SetActive(false);
+
+            SwordRange.SetActive(false);
         }
     }
     void firstRifle()

@@ -19,7 +19,6 @@ public class EnemyMovement : MonoBehaviour
 
     public Transform firePoint;
     public GameObject bulletPrefarb;
-    public float move;
     public float firerate;
     float nextfire;
     public Weapon pammo;
