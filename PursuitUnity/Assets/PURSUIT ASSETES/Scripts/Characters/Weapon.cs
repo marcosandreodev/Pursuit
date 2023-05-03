@@ -71,9 +71,6 @@ public class Weapon : MonoBehaviour
         {
             CanvaR.SetActive(true);
         }
-
-
-
     }
 
     void IsNotReloading()
