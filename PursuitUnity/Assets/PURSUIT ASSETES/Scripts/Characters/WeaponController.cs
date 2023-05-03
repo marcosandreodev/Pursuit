@@ -85,6 +85,11 @@ public class WeaponController : MonoBehaviour
             ShadowBarE.SetActive(false);
             EnergyBar.SetActive(false);
             EnergyIcon.SetActive(false);
+
+            BarE.SetActive(false);
+            ShadowBarE.SetActive(false);
+            EnergyBar.SetActive(false);
+            EnergyIcon.SetActive(false);
         }
 
         //enable hands

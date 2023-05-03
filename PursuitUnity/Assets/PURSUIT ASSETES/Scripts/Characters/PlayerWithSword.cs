@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerWithSword : MonoBehaviour
 {
@@ -41,6 +42,18 @@ public class PlayerWithSword : MonoBehaviour
     const string PLAYER_JUMPV = "JumpingV";
     const string PLAYER_FALLV = "FallingV";
     const string PLAYER_ATACK = "AtackSword";
+    const string PLAYER_PICKR = "PickRifle";
+
+
+
+    public Image Swap;
+    [SerializeField] private GameObject Bar;
+    [SerializeField] private GameObject ShadowBar;
+    [SerializeField] private GameObject AMmoBar;
+    [SerializeField] private GameObject AmmoIcon;
+    [SerializeField] private Transform rifle;
+    [SerializeField] private bool rifleBool = false;
+
 
     public void StopReloading()
     {
@@ -227,6 +240,25 @@ public class PlayerWithSword : MonoBehaviour
             }
             jump();
         }
+        if (isTriggered == true)
+        {
+            DisplayMessage.SetActive(true);
+
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                rifleBool = true;
+                ChangeAnimationState(PLAYER_PICKR);
+                move = 0;
+                rb.velocity = new Vector2(0, 0);
+                transform.rotation = rifle.rotation;
+                Swap.sprite = Resources.Load<Sprite>("CH/SwapRifle");
+                Bar.SetActive(true);
+                ShadowBar.SetActive(true);
+                AMmoBar.SetActive(true);
+                AmmoIcon.SetActive(true);
+            }
+
+        }
     }
 
 
@@ -266,4 +298,5 @@ public class PlayerWithSword : MonoBehaviour
         animator.Play(newAnimation);
         currentAnimation = newAnimation;
     }
+
 }

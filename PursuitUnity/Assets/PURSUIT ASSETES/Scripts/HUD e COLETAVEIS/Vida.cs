@@ -20,8 +20,7 @@ public class Vida : MonoBehaviour
     {
 
     }
-
-    private void OnCollisionEnter2D(Collision2D other)
+             private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.GetComponent<PlayerHealth>().health < 100)
         {
@@ -30,12 +29,11 @@ public class Vida : MonoBehaviour
                 DestroySpray();
                 other.gameObject.GetComponent<PlayerHealth>().health += vida;
             }
-
-            else other.gameObject.GetComponent<PlayerHealth>().health = 100;
-            {
-
-            }
-        } 
+        }
+    }
+    private void OnTriggerExit2D(Collider2D coll)
+    {
+        DestroySpray();
     }
 
     void DestroySpray()

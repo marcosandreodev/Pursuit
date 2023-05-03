@@ -193,7 +193,7 @@ public class PlayerWithRifle : MonoBehaviour
             Shooting();
 
         }
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.R) && move !=0)
         {
             isReloading = true;
             ChangeAnimationState(PLAYER_RELOAD);
