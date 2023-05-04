@@ -52,9 +52,9 @@ public class PlayerWithSword : MonoBehaviour
     [SerializeField] private GameObject SwordRange;
 
     
-    public float MaxEnergy;
-    public Image BarE;
-    public float BarDamage;
+    public float MaxEnergy =4;
+   // public Image BarE;
+    //public float BarDamage;
     public float ActualEnergy;
 
 
@@ -157,7 +157,7 @@ public class PlayerWithSword : MonoBehaviour
     void Start()
     {
         swordDamage = GetComponent<SwordDamage>();
-        MaxEnergy = 4;
+        //MaxEnergy = 4;
         rb = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
@@ -185,7 +185,7 @@ public class PlayerWithSword : MonoBehaviour
         // inverter posição boneco
 
 
-        if (Input.GetButtonDown("Fire1") && move == 0 && !jumping)
+        if (Input.GetButton("Fire1") && move == 0 && !jumping)
         { 
             isAtacking = true;
         }
@@ -199,7 +199,7 @@ public class PlayerWithSword : MonoBehaviour
         }
         if (isAtacking)
         {
-            BarE.fillAmount = Mathf.Clamp(ActualEnergy / MaxEnergy, 0, 4);
+            //BarE.fillAmount = Mathf.Clamp(ActualEnergy / MaxEnergy, 0, 4);
             SwordRange.SetActive(true);
             Shooting();
 
@@ -208,15 +208,15 @@ public class PlayerWithSword : MonoBehaviour
         {
             SwordRange.SetActive(false);
           }
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            isReloading = true;
-            ChangeAnimationState(PLAYER_ATACK);
-            moveSpeed = 0f;
-            runSpeed = 0f;
-            move = 0;
-            isAtacking = false;
-        }
+        //if (Input.GetKeyDown(KeyCode.R))
+        //{
+           // isReloading = true;
+           // ChangeAnimationState(PLAYER_ATACK);
+           // moveSpeed = 0f;
+           // runSpeed = 0f;
+           // move = 0;
+           // isAtacking = false;
+        //}
 
         //Animação boneco
 

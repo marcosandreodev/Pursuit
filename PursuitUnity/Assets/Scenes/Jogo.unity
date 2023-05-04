@@ -2043,13 +2043,11 @@ MonoBehaviour:
     m_Bits: 64
   isAtacking: 0
   isReloading: 0
-  DisplayMessage: {fileID: 0}
+  DisplayMessage: {fileID: 1220170126}
   rifle: {fileID: 0}
   rifleBool: 0
   SwordRange: {fileID: 1260219020}
-  MaxEnergy: 0
-  BarE: {fileID: 565416544}
-  BarDamage: 0
+  MaxEnergy: 4
   ActualEnergy: 0
 --- !u!114 &489360354
 MonoBehaviour:
@@ -6364,7 +6362,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.19275677, y: 0.052809954}
+  m_Offset: {x: 0.24178779, y: 0.052809954}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -6375,7 +6373,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.23425412, y: 0.44021368}
+  m_Size: {x: 0.33231616, y: 0.44021368}
   m_EdgeRadius: 0
 --- !u!114 &1260219023
 MonoBehaviour:
@@ -6389,7 +6387,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9968c8b56968921499d3a4eb85b4de00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Energy: 4
+  BarE: {fileID: 565416544}
+  ActualEnergy: 0
+  MaxEnergy: 4
   damage: 100
   isTriggerd: 0
 --- !u!1 &1348531940
