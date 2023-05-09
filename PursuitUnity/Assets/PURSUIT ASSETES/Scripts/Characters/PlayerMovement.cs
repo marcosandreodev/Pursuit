@@ -45,9 +45,11 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private GameObject AMmoBar;
     [SerializeField] private GameObject AmmoIcon;
 
-   Rigidbody2D rb;
+    Rigidbody2D rb;
     SpriteRenderer sprite;
 
+
+    public Vector2 posInicial;
 
     const string PLAYER_IDLE = "IdleMain";
     const string PLAYER_WALK = "Walk";
@@ -138,6 +140,7 @@ public class PlayerMovement : MonoBehaviour
         sizeCapsule = new Vector2(0.13f, -0.01f);
         angleCapsule = -90f;
 
+        posInicial = transform.position;
 
     }
 
@@ -223,7 +226,6 @@ public class PlayerMovement : MonoBehaviour
     }
 
 
-
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
@@ -288,5 +290,4 @@ public class PlayerMovement : MonoBehaviour
         animator.Play(newAnimation);
         currentAnimation = newAnimation;
     }
-
 }

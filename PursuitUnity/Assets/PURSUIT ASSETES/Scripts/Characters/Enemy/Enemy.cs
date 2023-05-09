@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
@@ -8,12 +9,16 @@ public class Enemy : MonoBehaviour
 
     public GameObject deathEffect;
 
+    public Text enemyCountText;
+    private int enemyCount = 0;
+
     public void TakeDamage(int damage)
     {
         health -= damage;
         if (health <= 0)
         {
             Die();
+            IncreaseEnemyCount();
         }
     }
 
@@ -22,5 +27,12 @@ public class Enemy : MonoBehaviour
     {
         Instantiate(deathEffect, transform.position, Quaternion.identity);
         Destroy(gameObject);
+
+    }
+
+    public void IncreaseEnemyCount()
+    {
+        enemyCount++;// incrementa o contador de inimigos mortos
+        enemyCountText.text = "" + enemyCount; // atualiza o texto exibido na tela
     }
 }

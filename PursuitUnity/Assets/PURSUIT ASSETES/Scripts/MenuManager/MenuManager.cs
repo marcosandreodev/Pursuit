@@ -11,11 +11,14 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private string NomeLevel;
     [SerializeField] private GameObject PainelMenuI;
     [SerializeField] private GameObject PainelO;
+    [SerializeField] private string NomeCheck;
 
     private int dificuldade;
     public Image legenda;
-    public void Jogar()
+
+    public void NovoJogo()
     {
+        PlayerPrefs.DeleteAll();
         SceneManager.LoadScene(NomeLevel);
     }
     public void AbrirOp()
@@ -34,6 +37,16 @@ public class MenuManager : MonoBehaviour
     {
         Debug.Log("Sair do jogo");
         Application.Quit();
+        OnApplicationQuit();
+    }
+    private void OnApplicationQuit()
+    {
+        PlayerPrefs.Save();
+    }
+
+    public void Continuar()
+    {
+
     }
 
     void GetDificuldade()
