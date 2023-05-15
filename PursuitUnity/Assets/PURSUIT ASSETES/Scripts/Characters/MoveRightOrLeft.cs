@@ -7,11 +7,12 @@ public class MoveRightOrLeft : MonoBehaviour
     public bool canMove = true;
     public float direction;
     bool facingRight = true;
+    private Vector3 respawnPoint;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        respawnPoint= transform.position;
     }
 
     // Update is called once per frame
@@ -49,4 +50,18 @@ public class MoveRightOrLeft : MonoBehaviour
         transform.Rotate(0f, 180f, 0f);
         facingRight = !facingRight;
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "FallPoint")
+        {
+            transform.position = respawnPoint;
+        }
+        if (collision.tag == "Checkpoint")
+        {
+            respawnPoint = transform.position;
+        }
+    }
+
+
 }

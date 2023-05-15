@@ -7,10 +7,10 @@ public class Enemy : MonoBehaviour
 {
     public int health = 100;
 
-    public GameObject deathEffect;
+    public int enemyCount;
 
-    public Text enemyCountText;
-    private int enemyCount = 0;
+    public KillCount killCount;
+    public GameObject deathEffect;
 
     public void TakeDamage(int damage)
     {
@@ -18,7 +18,7 @@ public class Enemy : MonoBehaviour
         if (health <= 0)
         {
             Die();
-            IncreaseEnemyCount();
+            killCount.IncreaseEnemyCount();
         }
     }
 
@@ -27,12 +27,10 @@ public class Enemy : MonoBehaviour
     {
         Instantiate(deathEffect, transform.position, Quaternion.identity);
         Destroy(gameObject);
-
     }
 
     public void IncreaseEnemyCount()
     {
-        enemyCount++;// incrementa o contador de inimigos mortos
-        enemyCountText.text = "" + enemyCount; // atualiza o texto exibido na tela
+        enemyCount += 1;// incrementa o contador de inimigos mortos
     }
 }

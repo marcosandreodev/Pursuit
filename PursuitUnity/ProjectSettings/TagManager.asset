@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Rifle
   - Checkpoint
+  - FallPoint
   layers:
   - Default
   - TransparentFX
