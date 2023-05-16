@@ -26,12 +26,13 @@ public class ColetavelP : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Destroy(gameObject);
+
         if (collision.CompareTag("Player"))
         {
+            Destroy(gameObject);
             Pontuacao.AddPontos(pontos);
             AudioSource.PlayClipAtPoint(somColetavel, transform.position);
             transform.position = posicaoInicial;
-            Destroy(gameObject);
         }
     }
 }
