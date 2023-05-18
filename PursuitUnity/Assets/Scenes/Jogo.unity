@@ -7220,7 +7220,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 707884151889629807, guid: ae4f564e8d131da43aa5bda641e0556d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.0499618
+      value: -2.052485
       objectReference: {fileID: 0}
     - target: {fileID: 707884151889629807, guid: ae4f564e8d131da43aa5bda641e0556d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -7264,6 +7264,44 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae4f564e8d131da43aa5bda641e0556d, type: 3}
+--- !u!1 &707884151654001392 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 707884151889629843, guid: ae4f564e8d131da43aa5bda641e0556d, type: 3}
+  m_PrefabInstance: {fileID: 707884151654001391}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &707884151654001393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 707884151654001392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!1001 &1561271517686832588
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7717,7 +7755,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8686993620714523272, guid: 29f79f07d344c5d44be112d29497961c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.0499618
+      value: -2.052485
       objectReference: {fileID: 0}
     - target: {fileID: 8686993620714523272, guid: 29f79f07d344c5d44be112d29497961c, type: 3}
       propertyPath: m_LocalPosition.y
