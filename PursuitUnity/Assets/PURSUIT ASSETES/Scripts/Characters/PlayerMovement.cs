@@ -20,11 +20,11 @@ public class PlayerMovement : MonoBehaviour
     private PlayerWithRifle playerUseRifle;
     private PlayerMovement playerHands;
 
-    [SerializeField] private float moveSpeed = 2f;
-    [SerializeField] private float runSpeed = 5f;
+    [SerializeField] private float moveSpeed = 5f;
+    [SerializeField] private float runSpeed = 12f;
     private bool jumping;
     private bool running;
-    [SerializeField] private float jumpSpeed = 7f;
+    [SerializeField] private float jumpSpeed = 30f;
 
     [SerializeField] private float ghostJump;
 
@@ -64,8 +64,8 @@ public class PlayerMovement : MonoBehaviour
 
     public void walking()
     {
-        moveSpeed = 2f;
-        runSpeed = 5f;
+        moveSpeed = 5f;
+        runSpeed = 12f;
         if (isGrounded && running == false)
         {
 
