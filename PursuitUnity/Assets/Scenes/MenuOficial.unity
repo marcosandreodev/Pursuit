@@ -2450,7 +2450,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6730815ea73e34a4bb4a42e0ca1f9089, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NomeLevel: Jogo
+  NomeLevel: FirstScene
   PainelMenuI: {fileID: 1761927706}
   PainelO: {fileID: 1247708773}
   NomeCheck: Nivel 1

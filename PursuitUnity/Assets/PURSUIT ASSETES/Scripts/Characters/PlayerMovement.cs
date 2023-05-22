@@ -137,7 +137,7 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
-        sizeCapsule = new Vector2(0.08f, 0.23f);
+        sizeCapsule = new Vector2(0.4f, 0.12f);
         angleCapsule = -90f;
 
         posInicial = transform.position;
