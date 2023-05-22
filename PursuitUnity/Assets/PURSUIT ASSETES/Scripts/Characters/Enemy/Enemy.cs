@@ -6,11 +6,14 @@ using UnityEngine.UI;
 public class Enemy : MonoBehaviour
 {
     public int health = 100;
-
-    public int enemyCount;
-
-    public KillCount killCount;
     public GameObject deathEffect;
+
+    private KillCount killCount;
+
+    private void Start()
+    {
+        killCount = FindObjectOfType<KillCount>();
+    }
 
     public void TakeDamage(int damage)
     {
@@ -18,19 +21,17 @@ public class Enemy : MonoBehaviour
         if (health <= 0)
         {
             Die();
-            killCount.IncreaseEnemyCount();
         }
     }
 
-    // Update is called once per frame
-    void Die()
+    private void Die()
     {
         Instantiate(deathEffect, transform.position, Quaternion.identity);
         Destroy(gameObject);
-    }
 
-    public void IncreaseEnemyCount()
-    {
-        enemyCount += 1;// incrementa o contador de inimigos mortos
+        if (killCount != null)
+        {
+            killCount.IncreaseEnemyCount();
+        }
     }
 }

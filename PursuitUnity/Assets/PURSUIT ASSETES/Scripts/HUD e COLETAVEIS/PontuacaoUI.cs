@@ -7,7 +7,8 @@ public class PontuacaoUI : MonoBehaviour
 {
     [SerializeField] private Text textoPontuacao;
     public int inici = 0;
-    
+    int pontuacaoTotal;
+
 
     private void Start()
     {
@@ -17,6 +18,7 @@ public class PontuacaoUI : MonoBehaviour
 
     public void UpdateUI()
     {
-        textoPontuacao.text += Pontuacao.pontos;
+        pontuacaoTotal = inici + Pontuacao.pontos;
+        textoPontuacao.text = pontuacaoTotal.ToString();
     }
 }
