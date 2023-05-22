@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -24,5 +25,15 @@ public class KillCount : MonoBehaviour
     private void UpdateUI()
     {
         enemyCountText.text = kills.ToString(); // Atualiza o texto exibido na tela
+    }
+
+    public void LoadData(GameData data)
+    {
+        this.kills = data.kills;
+    }
+
+    public void SaveData(ref GameData data)
+    {
+        data.kills = this.kills;
     }
 }

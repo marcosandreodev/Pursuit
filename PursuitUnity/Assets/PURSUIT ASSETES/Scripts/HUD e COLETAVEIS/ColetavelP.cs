@@ -5,7 +5,7 @@ using UnityEngine;
 public class ColetavelP : MonoBehaviour
 {
 
-    public int pontos = 10;
+    public int pontos = 0;
     public AudioClip somColetavel;
 
     private Vector2 posicaoInicial;
