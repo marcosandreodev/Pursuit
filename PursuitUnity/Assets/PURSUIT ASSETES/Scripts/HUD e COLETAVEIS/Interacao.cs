@@ -25,7 +25,7 @@ public class Interacao : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            CollectItem()
+            CollectItem();
         }
     }
 
