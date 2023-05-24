@@ -4,35 +4,34 @@ using UnityEngine;
 
 public class ColetavelP : MonoBehaviour
 {
+    //public int pontos = 0;
+    //public AudioClip somColetavel;
 
-    public int pontos = 0;
-    public AudioClip somColetavel;
-
-    private Vector2 posicaoInicial;
+    //private Vector2 posicaoInicial;
 
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        posicaoInicial = transform.position;
-    }
+    //// Start is called before the first frame update
+    //void Start()
+    //{
+    //    posicaoInicial = transform.position;
+    //}
 
-    // Update is called once per frame
-    void Update()
-    {
+    //// Update is called once per frame
+    //void Update()
+    //{
         
-    }
+    //}
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        Destroy(gameObject);
+    //private void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    Destroy(gameObject);
 
-        if (collision.CompareTag("Player"))
-        {
-            Destroy(gameObject);
-            Pontuacao.AddPontos(pontos);
-            AudioSource.PlayClipAtPoint(somColetavel, transform.position);
-            transform.position = posicaoInicial;
-        }
-    }
+    //    if (collision.CompareTag("Player"))
+    //    {
+    //        Destroy(gameObject);
+    //        Pontuacao.AddPontos(pontos);
+    //        AudioSource.PlayClipAtPoint(somColetavel, transform.position);
+    //        transform.position = posicaoInicial;
+    //    }
+    //}
 }

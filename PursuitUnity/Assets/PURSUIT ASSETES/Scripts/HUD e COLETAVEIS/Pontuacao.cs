@@ -1,48 +1,48 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class Pontuacao : MonoBehaviour
+public class Pontuacao : MonoBehaviour, IDataPersistance
 {
-    public static int pontos = 0;
-    private static PontuacaoUI pontuacaoUI;
-    private static string pontosPlayerPrefsKey = "Pontuacao";
+    private int pontos = 0;
+    public Text textoPontuacao;
 
     private void Start()
     {
-        LoadPontuacao();
-        if (pontuacaoUI != null)
-        {
-            pontuacaoUI.UpdateUI();
-        }
+        // subscribe to events
+        GameEventsManager.instance.onCoinCollected += OnCoinCollected;
     }
 
-    public static void AddPontos(int pontosParaAdicionar)
+    private void OnDestroy()
     {
-        pontos += pontosParaAdicionar;
-        if (pontuacaoUI != null)
-        {
-            pontuacaoUI.UpdateUI();
-        }
-        SavePontuacao();
+        // unsubscribe from events
+        GameEventsManager.instance.onCoinCollected -= OnCoinCollected;
     }
 
-    public static void SetPontuacaoUI(PontuacaoUI ui)
+    private void OnCoinCollected()
     {
-        pontuacaoUI = ui;
+        pontos++;
     }
 
-    private static void SavePontuacao()
+
+    public void LoadData(GameData data)
     {
-        PlayerPrefs.SetInt(pontosPlayerPrefsKey, pontos);
-        PlayerPrefs.Save();
+        this.pontos = data.pontos;
     }
 
-    private static void LoadPontuacao()
+    public void SaveData(ref GameData data)
     {
-        if (PlayerPrefs.HasKey(pontosPlayerPrefsKey))
-        {
-            pontos = PlayerPrefs.GetInt(pontosPlayerPrefsKey);
-        }
+        Debug.Log("Salvou dados");
+        data.pontos = this.pontos;
+    }
+
+    public void Update()
+    {
+        Debug.Log("Entrou Update Score");
+        textoPontuacao.text = pontos.ToString();
     }
 }
+

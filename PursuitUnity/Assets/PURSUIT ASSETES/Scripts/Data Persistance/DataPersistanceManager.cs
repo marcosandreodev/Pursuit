@@ -1,11 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class DataPersistanceManager : MonoBehaviour
 {
+    [Header("File Storage Config")]
+    [SerializeField] private string fileName;
+
     private GameData gameData;
     private List<IDataPersistance> dataPersistancesObjects;
+
+    private FileDataHandler dataHandler;
 
     public static DataPersistanceManager instance { get; private set; }
 
@@ -21,6 +27,7 @@ public class DataPersistanceManager : MonoBehaviour
 
     private void Start()
     {
+        this.dataHandler = new FileDataHandler(Application.persistentDataPath, fileName);
         this.dataPersistancesObjects = FindAllDataPersistanceObjects();
         LoadGame();
     }
@@ -33,10 +40,12 @@ public class DataPersistanceManager : MonoBehaviour
     public void LoadGame()
     {
         // Load any saved data from a file using data handler
+        this.gameData = dataHandler.Load();
+
         // if no data can be loaded, initialize to a new game 
-        if (gameData = null)
+        if (gameData == null)
         {
-            Debug.Log("Não foi encontrado dados");
+            Debug.Log("No data was foud. Initalizing data to defaults");
             NewGame();
         }
 
@@ -45,7 +54,7 @@ public class DataPersistanceManager : MonoBehaviour
             dataPersistanceObj.LoadData(gameData);
         }
 
-        Debug.Log("loaded death count ");
+        Debug.Log("loaded kills count : " + gameData.pontos);
     }
 
     public void SaveGame()
@@ -54,6 +63,9 @@ public class DataPersistanceManager : MonoBehaviour
         {
             dataPersistanceObj.SaveData(ref gameData);
         }
+        Debug.Log("saved kills count : " + gameData.pontos);
+
+        dataHandler.Save(gameData);
     }
 
     private void OnApplicationQuit()
@@ -63,7 +75,7 @@ public class DataPersistanceManager : MonoBehaviour
 
     private List<IDataPersistance> FindAllDataPersistanceObjects()
     {
-        IEnumerable<IDataPersistance> dataPersistancesObjects = FindAllDataPersistanceObjects > ()
+        IEnumerable<IDataPersistance> dataPersistancesObjects = FindObjectsOfType<MonoBehaviour>()
             .OfType<IDataPersistance>();
 
         return new List<IDataPersistance>(dataPersistancesObjects);

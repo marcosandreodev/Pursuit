@@ -2,17 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameData : MonoBehaviour
+[System.Serializable]
+public class GameData
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public int pontos;
 
-    // Update is called once per frame
-    void Update()
+    public GameData()
     {
-        
+        this.pontos = 0;
     }
 }
