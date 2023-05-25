@@ -28,7 +28,6 @@ public class BlinkLight : MonoBehaviour
             }
             else if (GetComponent<Light2D>().enabled == false)
             {
-                Debug.Log("I'm flashing you.");
                 GetComponent<Light2D>().enabled = true;
             }
             timer = 0.5f;

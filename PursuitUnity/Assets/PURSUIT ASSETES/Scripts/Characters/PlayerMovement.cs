@@ -20,11 +20,11 @@ public class PlayerMovement : MonoBehaviour
     private PlayerWithRifle playerUseRifle;
     private PlayerMovement playerHands;
 
-    [SerializeField] private float moveSpeed = 5f;
-    [SerializeField] private float runSpeed = 12f;
+    private float moveSpeed = 15f;
+    private float runSpeed = 25f;
     private bool jumping;
     private bool running;
-    [SerializeField] private float jumpSpeed = 30f;
+    private float jumpSpeed = 13f;
 
     [SerializeField] private float ghostJump;
 
@@ -46,37 +46,54 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private GameObject AmmoIcon;
 
     Rigidbody2D rb;
-    SpriteRenderer sprite;
-
-
+    private SpriteRenderer sprite;
+    public bool isFlashLightOn = false;
     public Vector2 posInicial;
 
-    const string PLAYER_IDLE = "IdleMain";
-    const string PLAYER_WALK = "Walk";
-    const string PLAYER_RUN = "Running";
-    const string PLAYER_JUMPH = "JumpingH";
-    const string PLAYER_FALLH = "FallingH";
-    const string PLAYER_JUMPV = "JumpingV";
-    const string PLAYER_FALLV = "FallingV";
-    const string PLAYER_PICKR = "PickRifle";
+    string PLAYER_IDLE = "IdleMain";
+    string PLAYER_WALK = "Walk";
+    string PLAYER_RUN = "Running";
+    string PLAYER_JUMPH = "JumpingH";
+    string PLAYER_FALLH = "FallingH";
+    string PLAYER_JUMPV = "JumpingV";
+    string PLAYER_FALLV = "FallingV";
+
+    string PLAYER_IDLES = "IdleMainS";
+    string PLAYER_WALKS = "WalkS";
+    string PLAYER_RUNS = "RunningS";
+    string PLAYER_JUMPHS = "JumpingHS";
+    string PLAYER_FALLHS = "FallingHS";
+    string PLAYER_JUMPVS = "JumpingVS";
+    string PLAYER_FALLVS = "FallingVS";
 
 
 
     public void walking()
     {
-        moveSpeed = 5f;
-        runSpeed = 12f;
         if (isGrounded && running == false)
         {
 
             if (rb.velocity.x != 0 && move != 0)
             {
-                ChangeAnimationState(PLAYER_WALK);
-
+                if(isFlashLightOn)
+                {
+                    ChangeAnimationState(PLAYER_WALKS);
+                }
+                if (!isFlashLightOn)
+                {
+                    ChangeAnimationState(PLAYER_WALK);
+                }
             }
             else
             {
-                ChangeAnimationState(PLAYER_IDLE);
+                if (isFlashLightOn)
+                {
+                    ChangeAnimationState(PLAYER_IDLES);
+                }
+                if (!isFlashLightOn)
+                {
+                    ChangeAnimationState(PLAYER_IDLE);
+                }
             }
         }
         if (running == true)
@@ -86,12 +103,26 @@ public class PlayerMovement : MonoBehaviour
 
                 if (rb.velocity.x != 0 && move != 0)
                 {
-                    ChangeAnimationState(PLAYER_RUN);
+                    if (isFlashLightOn)
+                    {
+                        ChangeAnimationState(PLAYER_RUNS);
+                    }
+                    if (!isFlashLightOn)
+                    {
+                        ChangeAnimationState(PLAYER_RUN);
+                    }
                 }
 
                 else
                 {
-                    ChangeAnimationState(PLAYER_IDLE);
+                    if (isFlashLightOn)
+                    {
+                        ChangeAnimationState(PLAYER_IDLES);
+                    }
+                    if (!isFlashLightOn)
+                    {
+                        ChangeAnimationState(PLAYER_IDLES);
+                    }
                 }
             }
         }
@@ -106,12 +137,26 @@ public class PlayerMovement : MonoBehaviour
             //Pulo Vertical
             if (rb.velocity.y > 0)
             {
-                ChangeAnimationState(PLAYER_JUMPV);
+                if (isFlashLightOn)
+                {
+                    ChangeAnimationState(PLAYER_JUMPVS);
+                }
+                if (!isFlashLightOn)
+                {
+                    ChangeAnimationState(PLAYER_JUMPV);
+                }
             }
             //Queda Vertical
             if (rb.velocity.y < 0)
             {
-                ChangeAnimationState(PLAYER_FALLV);
+                if (isFlashLightOn)
+                {
+                    ChangeAnimationState(PLAYER_FALLVS);
+                }
+                if (!isFlashLightOn)
+                {
+                    ChangeAnimationState(PLAYER_FALLV);
+                }
             }
         }
         else
@@ -119,13 +164,26 @@ public class PlayerMovement : MonoBehaviour
             //Pulo Horizontal
             if (rb.velocity.y > 0 && rb.velocity.x != 0)
             {
-                ChangeAnimationState(PLAYER_JUMPH);
+                if (isFlashLightOn)
+                {
+                    ChangeAnimationState(PLAYER_JUMPHS);
+                }
+                if (!isFlashLightOn)
+                {
+                    ChangeAnimationState(PLAYER_JUMPH);
+                }
             }
             //Queda Horizontal
             if (rb.velocity.y < 0)
             {
-                ChangeAnimationState(PLAYER_FALLH);
-
+                if (isFlashLightOn)
+                {
+                    ChangeAnimationState(PLAYER_FALLHS);
+                }
+                if (!isFlashLightOn)
+                {
+                    ChangeAnimationState(PLAYER_FALLH);
+                }
             }
         }
     }
@@ -144,9 +202,25 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
+    public void FlashLightBlocked()
+    {
+        isFlashLightOn= false;
+    }
+
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyUp(KeyCode.F))        {
+            if (isFlashLightOn)
+            {
+               isFlashLightOn = false;
+            }
+            else
+            {
+                isFlashLightOn = true;
+            }
+        }
+
         if (rifleBool == false)
         {
             //Reconhecer o chão
@@ -204,25 +278,6 @@ public class PlayerMovement : MonoBehaviour
                 jump();
             }
         }
-        if (isTriggered == true)
-        {
-            DisplayMessage.SetActive(true);
-
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                rifleBool = true;
-                ChangeAnimationState(PLAYER_PICKR);
-                move = 0;
-                rb.velocity = new Vector2(0, 0);
-                transform.rotation = rifle.rotation;
-                Swap.sprite = Resources.Load<Sprite>("CH/SwapRifle");
-                Bar.SetActive(true);
-                ShadowBar.SetActive(true);
-                AMmoBar.SetActive(true);
-                AmmoIcon.SetActive(true);
-            }
-
-        }
     }
 
 
@@ -253,35 +308,6 @@ public class PlayerMovement : MonoBehaviour
 
             }
         }
-    }
-    private void OnTriggerEnter2D(Collider2D coll)
-    {
-        if (coll.gameObject.tag == "Rifle" && isGrounded)
-        {
-            isTriggered = true;
-        }
-        else
-        {
-            isTriggered = false;
-        }
-    }
-    private void OnTriggerExit2D(Collider2D coll)
-    {
-        if (coll.gameObject.tag == "Rifle" && isGrounded)
-        {
-            isTriggered = false;
-        }
-    }
-
-    void DestroyRifle()
-    {
-        Destroy(rifle.gameObject);
-    }
-
-    void PlayerPickedRifle()
-    {
-        rifleBool = false;
-        playerPickedRifle = true;
     }
 
     void ChangeAnimationState(string newAnimation)

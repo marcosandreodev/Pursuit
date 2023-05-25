@@ -6,11 +6,12 @@ public class PlayerWithRifle : MonoBehaviour
 {
     private float move;
 
-    [SerializeField] private float moveSpeed = 2f;
-    [SerializeField] private float runSpeed = 5f;
+
+    private float moveSpeed = 15f;
+    private float runSpeed = 25f;
     private bool jumping;
     private bool running;
-    [SerializeField] private float jumpSpeed = 4f;
+    private float jumpSpeed = 13f;
 
     [SerializeField] private float ghostJump;
 
@@ -20,7 +21,7 @@ public class PlayerWithRifle : MonoBehaviour
     public Vector2 sizeCapsule;
     [SerializeField] private float angleCapsule;
     public LayerMask whatIsGround;
-    bool facingRight = true;
+    public bool facingRight = true;
     public bool isAtacking = false;
     public bool isReloading = false;
 
@@ -50,23 +51,23 @@ public class PlayerWithRifle : MonoBehaviour
             ChangeAnimationState(PLAYER_SHOOT);
         }
         isReloading = false;
-        moveSpeed = 2f;
-        runSpeed = 5f;
+        moveSpeed = 15f;
+        runSpeed = 25f;
 
     }
 
     public void Shooting()
     {
         ChangeAnimationState(PLAYER_SHOOT);
-        moveSpeed = 2f;
-        runSpeed = 5f;
+        moveSpeed = 15f;
+        runSpeed = 25f;
     }
 
 
     public void walking()
     {
-        moveSpeed = 2f;
-        runSpeed = 5f;
+        moveSpeed = 15f;
+        runSpeed = 25f;
         if (isGrounded && running == false && isReloading == false && isAtacking == false)
         {
 
@@ -144,7 +145,7 @@ public class PlayerWithRifle : MonoBehaviour
         sprite = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
 
-        sizeCapsule = new Vector2(0.08f, -0.04f);
+        sizeCapsule = new Vector2(0.4f, 0.12f);
         angleCapsule = -90f;
     }
 

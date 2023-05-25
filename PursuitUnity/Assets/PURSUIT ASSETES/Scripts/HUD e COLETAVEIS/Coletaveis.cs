@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Coletaveis : MonoBehaviour
 {
-    bool isCollected = false;
+    public bool isCollected = false;
     public GameObject collectabel;
 
     private void OnTriggerEnter2D(Collider2D collision)
