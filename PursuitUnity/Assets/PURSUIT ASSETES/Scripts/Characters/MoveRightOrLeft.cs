@@ -2,17 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveRightOrLeft : MonoBehaviour
+public class MoveRightOrLeft : MonoBehaviour, IDataPersistance
 {
     public bool canMove = true;
     public float direction;
     bool facingRight = true;
-    private Vector3 respawnPoint;
+    public Vector3 playerPosition;
 
     // Start is called before the first frame update
     void Start()
     {
-        respawnPoint= transform.position;
+
     }
 
     // Update is called once per frame
@@ -50,18 +50,27 @@ public class MoveRightOrLeft : MonoBehaviour
         transform.Rotate(0f, 180f, 0f);
         facingRight = !facingRight;
     }
+    //    if (collision.tag == "FallPoint")
+    //    {
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    //private void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //        transform.position = respawnPoint;
+    //    }
+    //    if (collision.tag == "Checkpoint")
+    //    {
+    //        respawnPoint = transform.position;
+    //    }
+    //}
+
+    public void LoadData(GameData data)
     {
-        if (collision.tag == "FallPoint")
-        {
-            transform.position = respawnPoint;
-        }
-        if (collision.tag == "Checkpoint")
-        {
-            respawnPoint = transform.position;
-        }
+        this.transform.position = data.playerPosition;
     }
 
+    public void SaveData(ref GameData data)
+    {
+        data.playerPosition = this.transform.position;
+    }
 
 }

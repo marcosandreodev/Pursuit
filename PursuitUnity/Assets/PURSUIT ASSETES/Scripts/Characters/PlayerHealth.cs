@@ -26,7 +26,7 @@ public class PlayerHealth : MonoBehaviour
         {
             playerIsDead= true;
             gameManager.gameOver();
-           gameObject.SetActive(false);
+            gameObject.SetActive(false);
         }
     }
 }

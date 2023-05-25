@@ -8,11 +8,11 @@ public class PlayerWithSword : MonoBehaviour
     private float move;
     private SwordDamage swordDamage;
 
-    [SerializeField] private float moveSpeed = 2f;
-    [SerializeField] private float runSpeed = 5f;
+    private float moveSpeed = 15f;
+    private float runSpeed = 25f;
     private bool jumping;
     private bool running;
-    [SerializeField] private float jumpSpeed = 4f;
+    private float jumpSpeed = 13f;
 
     [SerializeField] private float ghostJump;
 
@@ -22,9 +22,11 @@ public class PlayerWithSword : MonoBehaviour
     public Vector2 sizeCapsule;
     [SerializeField] private float angleCapsule;
     public LayerMask whatIsGround;
-    bool facingRight = true;
+    public bool facingRight = true;
     public bool isAtacking = false;
     public bool isReloading = false;
+
+    public bool isUsingSword = true;
 
 
 
@@ -48,7 +50,6 @@ public class PlayerWithSword : MonoBehaviour
     const string PLAYER_PICKR = "PickRifle";
 
     [SerializeField] private Transform rifle;
-    [SerializeField] private bool rifleBool = false;
     [SerializeField] private GameObject SwordRange;
 
     
@@ -56,8 +57,7 @@ public class PlayerWithSword : MonoBehaviour
    // public Image BarE;
     //public float BarDamage;
     public float ActualEnergy;
-
-
+    private bool rifleBool;
 
     public void StopReloading()
     {
@@ -67,23 +67,19 @@ public class PlayerWithSword : MonoBehaviour
             ChangeAnimationState(PLAYER_ATACK);
         }
         isReloading = false;
-        moveSpeed = 2f;
-        runSpeed = 5f;
-
+        isUsingSword = false;
     }
 
     public void Shooting()
     {
-        ChangeAnimationState(PLAYER_ATACK);
-        moveSpeed = 2f;
-        runSpeed = 5f;
+        isUsingSword = false;
+        ChangeAnimationState(PLAYER_ATACK);;
     }
 
 
     public void walking()
     {
-        moveSpeed = 2f;
-        runSpeed = 5f;
+        isUsingSword = false;
         if (isGrounded && running == false && isReloading == false && isAtacking == false)
         {
 
@@ -162,7 +158,7 @@ public class PlayerWithSword : MonoBehaviour
         sprite = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
 
-        sizeCapsule = new Vector2(0.08f, -0.04f);
+        sizeCapsule = new Vector2(0.4f, 0.12f);
         angleCapsule = -90f;
     }
 
@@ -174,6 +170,11 @@ public class PlayerWithSword : MonoBehaviour
         isGrounded = Physics2D.OverlapCapsule(feetPosition.position, sizeCapsule, CapsuleDirection2D.Horizontal, angleCapsule, whatIsGround);
 
         move = gameObject.GetComponent<MoveRightOrLeft>().direction;
+
+        if (rb.velocity.x == 0 && rb.velocity.y ==0 && isGrounded)
+        {
+            isUsingSword= true;
+        }
 
         //input do pulo do personagem
 
@@ -208,15 +209,6 @@ public class PlayerWithSword : MonoBehaviour
         {
             SwordRange.SetActive(false);
           }
-        //if (Input.GetKeyDown(KeyCode.R))
-        //{
-           // isReloading = true;
-           // ChangeAnimationState(PLAYER_ATACK);
-           // moveSpeed = 0f;
-           // runSpeed = 0f;
-           // move = 0;
-           // isAtacking = false;
-        //}
 
         //Animação boneco
 
@@ -251,18 +243,6 @@ public class PlayerWithSword : MonoBehaviour
                 running = false;
             }
             jump();
-        }
-        if (isTriggered == true)
-        {
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                rifleBool = true;
-                ChangeAnimationState(PLAYER_PICKR);
-                move = 0;
-                rb.velocity = new Vector2(0, 0);
-                transform.rotation = rifle.rotation;
-            }
-
         }
     }
 

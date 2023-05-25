@@ -16,7 +16,7 @@ public class EnemyMovement : MonoBehaviour
     bool isShooting;
     private string currentAnimation;
     bool isWalking;
-
+    public PlayerHealth health;
 
 
     public Transform firePoint;
@@ -30,18 +30,20 @@ public class EnemyMovement : MonoBehaviour
     const string ENEMY_SHOOT = "VShoot";
     const string ENEMY_RELOAD = "VReload";
 
-    bool isReloading;
+    public bool isReloading;
 
     public float bullets = 14;
 
     private void Start()
     {
         animator = GetComponent<Animator>();
+        health= GetComponent<PlayerHealth>();
     }
 
 
     void Update()
-    {
+    {       
+
         if (isShooting)
         {
            isChasing = false;
@@ -140,7 +142,7 @@ public class EnemyMovement : MonoBehaviour
 
     void Shoot()
     {
-        if (bullets > 0 )
+        if (bullets > 0)
         {
             isReloading = false;
             if (Time.time > nextfire)

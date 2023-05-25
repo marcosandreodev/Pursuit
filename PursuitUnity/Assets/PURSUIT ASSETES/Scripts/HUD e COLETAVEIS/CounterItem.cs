@@ -40,7 +40,7 @@ public class CounterItem : MonoBehaviour, IDataPersistance
         {
             if(pair.Value)
             {
-                pontuacao++;
+                pontuacao+= 100;
             }
         }
     }

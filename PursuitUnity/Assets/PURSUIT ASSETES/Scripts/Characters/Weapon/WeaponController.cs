@@ -15,7 +15,7 @@ public class WeaponController : MonoBehaviour
     public bool isWithRifle;
     public bool IsWithHands;
     public bool isWithSword;
-    bool changedGun;
+    public bool changedGun;
     public Image Swap;
     [SerializeField] private GameObject Bar;
     [SerializeField] private GameObject ShadowBar;
@@ -46,8 +46,10 @@ public class WeaponController : MonoBehaviour
         playerUseSword = GetComponent<PlayerWithSword>();
         animator = GetComponent<Animator>();
         weapon = GetComponent<Weapon>();
-       
-    }
+
+         IsWithHands = true;
+
+}
 
     void Update()
     {
@@ -72,7 +74,7 @@ public class WeaponController : MonoBehaviour
         }
 
         //enable rifle
-        if (Input.GetKeyDown(KeyCode.Alpha2) && playerHands.playerPickedRifle)
+        if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             ChangeAnimationState(PLAYER_IDLE_RIFLE);
             changedGun = true;

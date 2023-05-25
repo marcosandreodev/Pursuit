@@ -122,7 +122,6 @@ GameObject:
   - component: {fileID: 1565641801028411804}
   - component: {fileID: 1565641801028411807}
   - component: {fileID: 1565641801028411806}
-  - component: {fileID: 1565641801028411818}
   - component: {fileID: 1565641801028411816}
   - component: {fileID: 1565641801028411817}
   - component: {fileID: 1565641801028411792}
@@ -307,9 +306,6 @@ MonoBehaviour:
   rifleBool: 0
   rifle: {fileID: 0}
   PlayerRifle: {fileID: 6784812495780365211, guid: 10ed127f92e4ed44ea2819e604dafd3f, type: 3}
-  moveSpeed: 2
-  runSpeed: 5
-  jumpSpeed: 4
   ghostJump: 0
   isGrounded: 0
   isTriggered: 0
@@ -327,18 +323,6 @@ MonoBehaviour:
   AMmoBar: {fileID: 0}
   AmmoIcon: {fileID: 0}
   posInicial: {x: 0, y: 0}
---- !u!114 &1565641801028411818
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1565641801028411783}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8e3efef71e36114792162b1f559ab5e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1565641801028411816
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -351,9 +335,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3b5a3490eacae247b2dfd016fdc6fdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
-  runSpeed: 5
-  jumpSpeed: 4
   ghostJump: 0
   isGrounded: 0
   isTriggered: 0
@@ -378,9 +359,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac3acf21067a7d64e9f7e2b092736654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
-  runSpeed: 5
-  jumpSpeed: 4
   ghostJump: 0
   isGrounded: 0
   isTriggered: 0
@@ -392,6 +370,7 @@ MonoBehaviour:
     m_Bits: 64
   isAtacking: 0
   isReloading: 0
+  isUsingSword: 1
   DisplayMessage: {fileID: 0}
   rifle: {fileID: 0}
   rifleBool: 0
@@ -491,6 +470,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canMove: 1
   direction: 0
+  playerPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &1565641801140785807
 GameObject:
   m_ObjectHideFlags: 0
