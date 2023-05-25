@@ -11,8 +11,8 @@ public class EnemyMovement : MonoBehaviour
     public int patrolDestination;
     public Transform playerTransform;
     public bool isChasing;
-    public float chaseDistance = 4;
-    public float shootDistance = 2;
+    public float chaseDistance = 6;
+    public float shootDistance = 6;
     bool isShooting;
     private string currentAnimation;
     bool isWalking;
