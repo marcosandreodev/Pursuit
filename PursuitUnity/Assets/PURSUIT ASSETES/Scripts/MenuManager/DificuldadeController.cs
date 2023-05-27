@@ -49,7 +49,6 @@ public class DificuldadeController : MonoBehaviour
         nivelDificuldade = nivel;
 
         // Salva o nível de dificuldade escolhido
-        PlayerPrefs.SetInt("Dificuldade", nivel);
 
         // Atualiza os modificadores de dificuldade de acordo com o novo nível
         switch (nivelDificuldade)

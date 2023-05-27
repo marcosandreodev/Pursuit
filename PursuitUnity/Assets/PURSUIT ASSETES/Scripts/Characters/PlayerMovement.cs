@@ -20,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
     private PlayerWithRifle playerUseRifle;
     private PlayerMovement playerHands;
 
-    private float moveSpeed = 15f;
+    private float moveSpeed = 10f;
     private float runSpeed = 25f;
     private bool jumping;
     private bool running;

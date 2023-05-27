@@ -33,7 +33,7 @@ public class Pontuacao : MonoBehaviour, IDataPersistance
         this.pontos = data.pontos;
     }
 
-    public void SaveData(ref GameData data)
+    public void SaveData(GameData data)
     {
         Debug.Log("Salvou dados");
         data.pontos = this.pontos;

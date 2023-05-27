@@ -1,28 +1,56 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 
-public class KillCount : MonoBehaviour
+public class KillCount : MonoBehaviour, IDataPersistance
 {
-    public Text enemyCountText;
-    private int kills = 0;
+    public static KillCount instance;
 
-    private void Start()
+    public TMP_Text enemyCountText;
+    public int kills;
+   
+    private void Awake()
     {
-        UpdateUI();
+        instance = this;
+    }
+    void Start()
+    {
+        enemyCountText.text = "Kills: "+ kills.ToString();
     }
 
-    public void IncreaseEnemyCount()
+    public void IncreaseKills(int v)
     {
-        kills++; // Incrementa o contador de inimigos mortos
-        UpdateUI();
+        kills += v;
+        enemyCountText.text = "Kills: " + kills.ToString();
     }
 
-    private void UpdateUI()
+    public void Update()
     {
-        enemyCountText.text = kills.ToString(); // Atualiza o texto exibido na tela
+        enemyCountText.text = "Kills: " + kills.ToString();
+    }
+
+    public void LoadData(GameData data)
+    {
+        //this.pontuacao = data.pontos;
+
+        foreach (KeyValuePair<string, bool> pair in data.enemysKilled)
+        {
+            if (pair.Value)
+            {
+                kills ++;
+                Debug.Log("kills load Data: " + kills);
+            }
+        }
+    }
+
+    public void SaveData(GameData data)
+    {
+        data.kills = this.kills;
+
+        Debug.Log("kills load Data: " + data.kills);
     }
 }

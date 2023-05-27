@@ -1,23 +1,61 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
-public class MainMenu : MonoBehaviour
+public class MainMenu : Menu
 {
+    [Header("MenuNavigation")]
+    [SerializeField] private SaveSlotsMenu saveSlotsMenu;
+
+    [Header("Menu Buttons ")]
+    [SerializeField] private Button newGameButton;
+    [SerializeField] private Button continueGameButton;
+    [SerializeField] private Button loadGameButton;
+
+    private void Start()
+    {
+        if (!DataPersistanceManager.instance.HasGameData())
+        {
+             continueGameButton.interactable = false;
+            loadGameButton.interactable = false;
+        }
+    }
+
     //Start is called before the first frame update
     public void OnNewGameClicked()
     {
-        DataPersistanceManager.instance.NewGame();
+        saveSlotsMenu.ActivateMenu(false);
+        this.Deactivatemenu();
+    }
+
+    public void OnLoadGameClicked()
+    {
+        saveSlotsMenu.ActivateMenu(true);
+        this.Deactivatemenu();
     }
 
     // Update is called once per frame
-    public void OnLoadGameClicked()
+    public void OnContinueGameClicked()
     {
-        DataPersistanceManager.instance.LoadGame();
+        DisableMenuButtons();
+        
+        SceneManager.LoadSceneAsync("FirstScene");
     }
 
-    public void OnSaveGameClicked()
+    private void DisableMenuButtons()
     {
-        DataPersistanceManager.instance.SaveGame();
+        newGameButton.interactable = false;
+        continueGameButton.interactable = false;
+    }
+
+    public void Activatemenu()
+    {
+        this.gameObject.SetActive(true);
+    }
+    public void Deactivatemenu()
+    {
+        this.gameObject.SetActive(false);
     }
 }

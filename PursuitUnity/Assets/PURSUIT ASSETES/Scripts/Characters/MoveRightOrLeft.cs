@@ -68,7 +68,7 @@ public class MoveRightOrLeft : MonoBehaviour, IDataPersistance
         this.transform.position = data.playerPosition;
     }
 
-    public void SaveData(ref GameData data)
+    public void SaveData(GameData data)
     {
         data.playerPosition = this.transform.position;
     }

@@ -6,15 +6,19 @@ using UnityEngine.UI;
 using TMPro;
 using Unity.VisualScripting;
 
-public class MenuManager : MonoBehaviour
+public class MenuManager : MonoBehaviour, IDataPersistance
 {
     [SerializeField] private string NomeLevel;
     [SerializeField] private GameObject PainelMenuI;
     [SerializeField] private GameObject PainelO;
     [SerializeField] private string NomeCheck;
 
-    private int dificuldade;
+    public DataPersistanceManager dataPersistanceManager;
+
+    public int dificuldade = 2;
     public Image legenda;
+
+
 
     public void NovoJogo()
     {
@@ -25,8 +29,7 @@ public class MenuManager : MonoBehaviour
     {
         PainelMenuI.SetActive(false);
         PainelO.SetActive(true);
-        GetDificuldade();
-        Setlegenda();
+        dataPersistanceManager.LoadGame();
     }
     public void FechaOp()
     {
@@ -43,58 +46,25 @@ public class MenuManager : MonoBehaviour
     {
         PlayerPrefs.Save();
     }
-
-    public void Continuar()
+   
+    public void ChooseChallange()
     {
-
+        dificuldade = 1;
     }
 
-    void GetDificuldade()
+    public void SaveData(GameData data)
     {
-        if (PlayerPrefs.HasKey("Dificuldade"))
-        {
-            dificuldade = PlayerPrefs.GetInt("Dificuldade");
-        }
-        else
-        {
-            dificuldade = 2;
-        }
-       
+        data.dificuldade = dificuldade;
     }
 
-    void Setlegenda()
-    {
-        switch (dificuldade)
-        {
-            case 1: legenda.sprite = Resources.Load<Sprite>("MenuOficial/facil"); break;
-            case 2: legenda.sprite = Resources.Load<Sprite>("MenuOficial/medio"); break;
-            case 3: legenda.sprite = Resources.Load<Sprite>("MenuOficial/dificil"); break;
-        }
+    public void LoadData(GameData data) 
+    { 
+        dificuldade+= data.dificuldade;
     }
 
-    public void SetEasy()
+    public void SaveInfos()
     {
-        GetDificuldade();
-
-        dificuldade--;
-        if (dificuldade < 1) dificuldade = 1;
-
-        SetDificuldade();
-    }
-
-    public void SetHard()
-    {
-        GetDificuldade();
-
-        dificuldade++;
-        if (dificuldade > 3) dificuldade = 3;
-
-        SetDificuldade();
-    }
-
-    public void SetDificuldade()
-    {
-        PlayerPrefs.SetInt("Dificuldade", dificuldade);
-        Setlegenda();
+        dataPersistanceManager.SaveGame();
+        dataPersistanceManager.LoadGame();
     }
 }

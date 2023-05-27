@@ -45,7 +45,7 @@ public class CounterItem : MonoBehaviour, IDataPersistance
         }
     }
 
-    public void SaveData(ref GameData data)
+    public void SaveData(GameData data)
     {
         data.pontos = this.pontuacao;
     }
