@@ -49,32 +49,24 @@ public class DataPersistanceManager : MonoBehaviour
         if (overrideSelectedProfileId)
         {
             this.selectedProfileId = testSelectedProfileId; 
-            Debug.LogWarning("Overrode selected profile id with test id: " + testSelectedProfileId);
+            Debug.LogWarning("Override selected profile id with test id: " + testSelectedProfileId);
         }
-
     }
 
     private void OnEnable()
     {
         SceneManager.sceneLoaded+= OnSceneLoaded;
-        SceneManager.sceneUnloaded += OnSceneUnloaded;
     }
 
     private void OnDisable()
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
-        SceneManager.sceneUnloaded -= OnSceneUnloaded;
     }
 
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         this.dataPersistancesObjects = FindAllDataPersistanceObjects();
         LoadGame();
-    }
-
-    public void OnSceneUnloaded(Scene scene)
-    {
-        SaveGame();
     }
 
     public void ChangeSelectedProfileId(string newProfileId)

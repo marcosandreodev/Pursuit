@@ -42,7 +42,6 @@ public class KillCount : MonoBehaviour, IDataPersistance
             if (pair.Value)
             {
                 kills ++;
-                Debug.Log("kills load Data: " + kills);
             }
         }
     }
@@ -50,7 +49,5 @@ public class KillCount : MonoBehaviour, IDataPersistance
     public void SaveData(GameData data)
     {
         data.kills = this.kills;
-
-        Debug.Log("kills load Data: " + data.kills);
     }
 }

@@ -14,11 +14,14 @@ public class MainMenu : Menu
     [SerializeField] private Button continueGameButton;
     [SerializeField] private Button loadGameButton;
 
+    public int level;
+   
     private void Start()
     {
+        PlayerPrefs.SetString("HasDoneTutorial", "yes");
         if (!DataPersistanceManager.instance.HasGameData())
         {
-             continueGameButton.interactable = false;
+            continueGameButton.interactable = false;
             loadGameButton.interactable = false;
         }
     }
@@ -40,8 +43,9 @@ public class MainMenu : Menu
     public void OnContinueGameClicked()
     {
         DisableMenuButtons();
-        
-        SceneManager.LoadSceneAsync("FirstScene");
+        DataPersistanceManager.instance.SaveGame();
+        SceneManager.LoadSceneAsync("SecondScene");
+         
     }
 
     private void DisableMenuButtons()

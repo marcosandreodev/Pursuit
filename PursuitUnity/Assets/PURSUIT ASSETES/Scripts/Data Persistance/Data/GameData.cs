@@ -8,7 +8,7 @@ public class GameData
     public long lastUpdated;
 
     public int pontos;
-    public int dificuldade;
+    public int level;
     public int kills;
     public SerializableDictionary<string, bool> itensCollected;
     public SerializableDictionary<string, bool> enemysKilled;
@@ -18,28 +18,32 @@ public class GameData
     {
         this.pontos = 0;
         this.kills = 0;
-        this.dificuldade = 0;
+        this.level = 0;
         itensCollected = new SerializableDictionary<string, bool>();
         enemysKilled = new SerializableDictionary<string, bool>();
-        playerPosition= Vector3.zero;
+        playerPosition = Vector3.zero;
     }
 
     public int GetPercentageComplete()
     {
-        int totalKills = 0;
-        foreach(bool killed in enemysKilled.Values) {
-            if(killed)
-            {
-                totalKills++;
-            }
-        }
 
-        int percentageComplete = -1;
-        if(enemysKilled.Count != 0)
+        int percentageComplete = 0;
+
+        if(level == 0)
         {
-            percentageComplete = (totalKills * 100 / enemysKilled.Count);
+            percentageComplete = 0;
         }
+        if(level == 1) {
 
+            percentageComplete = 50;        
+        }
         return percentageComplete;
+    }
+
+    public int sGetLevel()
+    {
+        int isInlevel = level;
+
+        return isInlevel;
     }
 }

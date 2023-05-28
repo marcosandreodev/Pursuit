@@ -33,7 +33,9 @@ public class SaveSlotsMenu : Menu
             DataPersistanceManager.instance.NewGame();
         }
 
-        SceneManager.LoadSceneAsync("FirstScene");
+        DataPersistanceManager.instance.SaveGame();
+
+        SceneManager.LoadSceneAsync("SecondScene");
         
     }
 

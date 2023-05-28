@@ -21,7 +21,7 @@ public class Weapon : MonoBehaviour
     public Image Bar;
     public float BarDamage;
 
-
+    public GameObject fireLight;
 
     public bool isReloading = false;
 
@@ -43,15 +43,24 @@ public class Weapon : MonoBehaviour
                 Shoot();
                 Bar.fillAmount = Mathf.Clamp(bullets / MaxBulets, 0, 14);
             }
+            if (Input.GetButtonUp("Fire1"))
+            {
+                fireLight.SetActive(false);
+            }
         }
 
     }
     void Update()
     {
+        if (Input.GetButtonUp("Fire1"))
+        {
+            fireLight.SetActive(false);
+        }
 
         if (Input.GetKeyDown(KeyCode.R))
         {
             Reload();
+            fireLight.SetActive(false);
             CanvaR.SetActive(false);
         }
     }
@@ -64,11 +73,13 @@ public class Weapon : MonoBehaviour
             {
                 nextfire = Time.time + firerate;
                 Instantiate(bulletPrefarb, firePoint.position, firePoint.rotation);
+                fireLight.SetActive(true);
                 bullets -= 1;
             }
         }
         if (bullets == 0)
         {
+            fireLight.SetActive(false);
             CanvaR.SetActive(true);
         }
     }

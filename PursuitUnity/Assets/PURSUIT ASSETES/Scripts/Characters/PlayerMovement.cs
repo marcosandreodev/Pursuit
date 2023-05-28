@@ -198,8 +198,6 @@ public class PlayerMovement : MonoBehaviour
         sizeCapsule = new Vector2(0.4f, 0.12f);
         angleCapsule = -90f;
 
-        posInicial = transform.position;
-
     }
 
     public void FlashLightBlocked()

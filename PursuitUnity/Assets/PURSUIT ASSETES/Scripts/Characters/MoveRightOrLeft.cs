@@ -50,18 +50,6 @@ public class MoveRightOrLeft : MonoBehaviour, IDataPersistance
         transform.Rotate(0f, 180f, 0f);
         facingRight = !facingRight;
     }
-    //    if (collision.tag == "FallPoint")
-    //    {
-
-    //private void OnTriggerEnter2D(Collider2D collision)
-    //{
-    //        transform.position = respawnPoint;
-    //    }
-    //    if (collision.tag == "Checkpoint")
-    //    {
-    //        respawnPoint = transform.position;
-    //    }
-    //}
 
     public void LoadData(GameData data)
     {

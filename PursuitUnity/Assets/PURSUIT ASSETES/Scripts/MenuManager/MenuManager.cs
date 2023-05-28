@@ -6,7 +6,7 @@ using UnityEngine.UI;
 using TMPro;
 using Unity.VisualScripting;
 
-public class MenuManager : MonoBehaviour, IDataPersistance
+public class MenuManager : MonoBehaviour
 {
     [SerializeField] private string NomeLevel;
     [SerializeField] private GameObject PainelMenuI;
@@ -52,15 +52,15 @@ public class MenuManager : MonoBehaviour, IDataPersistance
         dificuldade = 1;
     }
 
-    public void SaveData(GameData data)
-    {
-        data.dificuldade = dificuldade;
-    }
+    //public void SaveData(GameData data)
+    //{
+    //    data.dificuldade = dificuldade;
+    //}
 
-    public void LoadData(GameData data) 
-    { 
-        dificuldade+= data.dificuldade;
-    }
+    //public void LoadData(GameData data) 
+    //{ 
+    //    dificuldade+= data.dificuldade;
+    //}
 
     public void SaveInfos()
     {
