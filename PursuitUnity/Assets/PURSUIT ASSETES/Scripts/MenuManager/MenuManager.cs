@@ -27,7 +27,6 @@ public class MenuManager : MonoBehaviour
     }
     public void AbrirOp()
     {
-        PainelMenuI.SetActive(false);
         PainelO.SetActive(true);
         dataPersistanceManager.LoadGame();
     }
