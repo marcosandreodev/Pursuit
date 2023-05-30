@@ -12,7 +12,7 @@ public class EnemyMovement : MonoBehaviour
     public Transform playerTransform;
     public bool isChasing;
     public float chaseDistance = 6;
-    public float shootDistance = 6;
+    public float shootDistance = 20;
     bool isShooting;
     private string currentAnimation;
     bool isWalking;
