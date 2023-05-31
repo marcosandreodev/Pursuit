@@ -48,5 +48,5 @@ MonoBehaviour:
   initializeDataIfNull: 0
   overrideSelectedProfileId: 0
   testSelectedProfileId: test
-  fileName: data.game
+  fileName: data.json
   useEncryption: 0

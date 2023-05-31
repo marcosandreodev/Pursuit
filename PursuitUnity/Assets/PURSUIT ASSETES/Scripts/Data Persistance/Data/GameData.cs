@@ -1,3 +1,4 @@
+using MongoDB.Bson;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,8 +6,10 @@ using UnityEngine;
 [System.Serializable]
 public class GameData
 {
+    public ObjectId _id;
+    public string name;
+    public string password;
     public long lastUpdated;
-
     public int pontos;
     public int level;
     public int kills;
