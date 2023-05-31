@@ -16,7 +16,7 @@ public class Weapon : MonoBehaviour
 
 
 
-    public float bullets = 14;
+    public float bullets = 10;
     public float MaxBulets;
     public Image Bar;
     public float BarDamage;
@@ -41,7 +41,7 @@ public class Weapon : MonoBehaviour
             if (Input.GetButton("Fire1"))
             {
                 Shoot();
-                Bar.fillAmount = Mathf.Clamp(bullets / MaxBulets, 0, 14);
+                Bar.fillAmount = Mathf.Clamp(bullets / MaxBulets, 0, 10);
             }
             if (Input.GetButtonUp("Fire1"))
             {
@@ -79,6 +79,7 @@ public class Weapon : MonoBehaviour
         }
         if (bullets == 0)
         {
+            Bar.fillAmount = Mathf.Clamp(bullets / MaxBulets, 0, 0);
             fireLight.SetActive(false);
             CanvaR.SetActive(true);
         }
@@ -96,7 +97,8 @@ public class Weapon : MonoBehaviour
 
     void Reload()
     {
-        bullets = 14;
-        Bar.fillAmount = Mathf.Clamp(bullets / MaxBulets, 14, 14);
+        bullets = 10;
+        MaxBulets = bullets;
+        Bar.fillAmount = Mathf.Clamp(bullets / MaxBulets, 10, 10);
     }
 }
