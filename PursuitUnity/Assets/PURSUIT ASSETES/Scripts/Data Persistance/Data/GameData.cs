@@ -40,6 +40,11 @@ public class GameData
 
             percentageComplete = 50;        
         }
+        if (level == 2)
+        {
+
+            percentageComplete = 100;
+        }
         return percentageComplete;
     }
 

@@ -39,6 +39,7 @@ public class PauseMenu : MonoBehaviour
     }
     public void MainMenu()
     {
+        DataPersistanceManager.instance.SaveGame();
         PlayerPrefs.Save();
         SceneManager.LoadScene(NomeLevel);
     }
