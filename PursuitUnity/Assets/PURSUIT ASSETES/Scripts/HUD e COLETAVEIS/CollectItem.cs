@@ -5,6 +5,9 @@ using UnityEngine;
 public class CollectItem : MonoBehaviour, IDataPersistance
 {
     [SerializeField] private string id;
+    public GameObject CanvaItem;
+    public GameObject CanvaE;
+    public float displayTime = 2f;
 
     [ContextMenu("Generate guid for id")]
     private void GenerateGuid()
@@ -20,11 +23,15 @@ public class CollectItem : MonoBehaviour, IDataPersistance
     {
         if (isTrigger && !collected)
         {
+            CanvaE.SetActive(true);
+
             if (Input.GetKeyDown(KeyCode.E))
             {
                 collected = true;
                 CounterItem.instance.IncreasePoint(value);
-                Destroy(gameObject);
+                CanvaE.SetActive(false);
+                StartCoroutine(DisplayCanvas());
+                GetComponent<Collider2D>().enabled = false;
             }
         }
     }
@@ -41,6 +48,7 @@ public class CollectItem : MonoBehaviour, IDataPersistance
         if (collision.gameObject.CompareTag("Player"))
         {
             isTrigger = false;
+            CanvaE.SetActive(false);
         }
     }
 
@@ -62,4 +70,12 @@ public class CollectItem : MonoBehaviour, IDataPersistance
         data.itensCollected.Add(id, collected);
     }
 
+    private IEnumerator DisplayCanvas()
+    {
+        CanvaItem.SetActive(true); // Ativa o objeto Canvas
+
+        yield return new WaitForSeconds(displayTime); // Aguarda o tempo determinado
+
+        CanvaItem.SetActive(false); // Desativa o objeto Canvas
+    }
 }

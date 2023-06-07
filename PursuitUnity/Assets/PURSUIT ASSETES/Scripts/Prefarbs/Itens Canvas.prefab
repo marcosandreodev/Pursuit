@@ -35,7 +35,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 40}
+  m_AnchoredPosition: {x: -27.900024, y: 50.300003}
   m_SizeDelta: {x: -700, y: -320}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8203330841876010710
@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d948590b40a37a2429318cb1b13423e7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 82dcb0c9c7bd22740b0e1613dff0cb32, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -167,12 +167,12 @@ GameObject:
   - component: {fileID: 8203330842220913216}
   - component: {fileID: 8203330842220913217}
   m_Layer: 5
-  m_Name: RingsCanva
+  m_Name: RingEarCanva
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &8203330842220913218
 RectTransform:
   m_ObjectHideFlags: 0
@@ -180,8 +180,8 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8203330842220913086}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.8341983}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -191,7 +191,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: -63.731, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -30.049911, y: 7.698234}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
 --- !u!223 &8203330842220913219
