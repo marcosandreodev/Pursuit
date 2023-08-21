@@ -6,20 +6,28 @@ public class ShowMessage : MonoBehaviour
 {
 
     public GameObject Object;
+    bool isTrigger;
     // Start is called before the first frame update
-    void Start()
-    {
-        Object.SetActive(false);
-    }
 
-    private void OnTriggerEnter2D(Collider other)
+    public void Update()
     {
-        Object.SetActive(true);
+        if (isTrigger)
+        {
+            Object.SetActive(true);
+        }
+        if (!isTrigger)
+        {
+            Object.SetActive(false);
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        isTrigger = true;
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        Object.SetActive(false);
+        isTrigger = false;
     }
 
 

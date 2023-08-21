@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Rifle
+  - Checkpoint
+  - FallPoint
   layers:
   - Default
   - TransparentFX
@@ -39,6 +41,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: BackGround
+    uniqueID: 188155933
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: player
+    uniqueID: 4153981305
+    locked: 0
+  - name: Ground
+    uniqueID: 3151581181
     locked: 0

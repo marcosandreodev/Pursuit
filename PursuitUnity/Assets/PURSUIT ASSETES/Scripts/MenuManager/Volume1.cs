@@ -10,12 +10,17 @@ public class Volume1 : MonoBehaviour
 
     private void Start()
     {
-        LoadValues(); 
+        LoadValues();
+    }
+
+    public void Update()
+    {
+        AudioListener.volume = volumeSlider.value;
     }
 
     public void VolumeSlider(float volume)
     {
-        volumeTextUi.text=volume.ToString("0.0");
+        volumeTextUi.text = volume.ToString("0.0");
     }
 
     public void SaveVolumeButton()
@@ -25,11 +30,10 @@ public class Volume1 : MonoBehaviour
         LoadValues();
     }
 
-    void LoadValues()
+    public void LoadValues()
     {
-        float volumeValue = PlayerPrefs.GetFloat("VolumeValue"); 
+        float volumeValue = volumeSlider.value;
         volumeSlider.value = volumeValue;
         AudioListener.volume = volumeValue;
     }
-   
 }

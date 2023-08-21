@@ -1,6 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.SceneManagement;
+
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -41,7 +39,13 @@ public class PauseMenu : MonoBehaviour
     }
     public void MainMenu()
     {
+        DataPersistanceManager.instance.SaveGame();
+        PlayerPrefs.Save();
         SceneManager.LoadScene(NomeLevel);
-        
+    }
+    public void RestarGame()
+    {
+        DataPersistanceManager.instance.NewGame();
+        SceneManager.LoadScene("SecondScene");
     }
 }

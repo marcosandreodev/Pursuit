@@ -1,0 +1,102 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: New Sprite Atlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: 3e909ee5e92647249a682e429bf0e33a, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 336681604, guid: 3e909ee5e92647249a682e429bf0e33a, type: 3}
+  - {fileID: 921743336, guid: 3e909ee5e92647249a682e429bf0e33a, type: 3}
+  - {fileID: 762767255, guid: 3e909ee5e92647249a682e429bf0e33a, type: 3}
+  - {fileID: -1734809338, guid: 3e909ee5e92647249a682e429bf0e33a, type: 3}
+  - {fileID: -1846754218, guid: 3e909ee5e92647249a682e429bf0e33a, type: 3}
+  - {fileID: -1367677363, guid: 3e909ee5e92647249a682e429bf0e33a, type: 3}
+  - {fileID: 1253618555, guid: 3e909ee5e92647249a682e429bf0e33a, type: 3}
+  - {fileID: 1059651731, guid: 3e909ee5e92647249a682e429bf0e33a, type: 3}
+  - {fileID: 883116953, guid: 3e909ee5e92647249a682e429bf0e33a, type: 3}
+  - {fileID: 1024849438, guid: 3e909ee5e92647249a682e429bf0e33a, type: 3}
+  - {fileID: 445747122, guid: 3e909ee5e92647249a682e429bf0e33a, type: 3}
+  - {fileID: -394166494, guid: 3e909ee5e92647249a682e429bf0e33a, type: 3}
+  - {fileID: -1451736051, guid: 3e909ee5e92647249a682e429bf0e33a, type: 3}
+  - {fileID: -2108696912, guid: 3e909ee5e92647249a682e429bf0e33a, type: 3}
+  - {fileID: 2070619681, guid: 3e909ee5e92647249a682e429bf0e33a, type: 3}
+  - {fileID: -1180364462, guid: 3e909ee5e92647249a682e429bf0e33a, type: 3}
+  - {fileID: 1866899347, guid: 3e909ee5e92647249a682e429bf0e33a, type: 3}
+  - {fileID: -1626381650, guid: 3e909ee5e92647249a682e429bf0e33a, type: 3}
+  - {fileID: -319475272, guid: 3e909ee5e92647249a682e429bf0e33a, type: 3}
+  - {fileID: 2107598160, guid: 3e909ee5e92647249a682e429bf0e33a, type: 3}
+  - {fileID: -1884197242, guid: 3e909ee5e92647249a682e429bf0e33a, type: 3}
+  - {fileID: 94155553, guid: 3e909ee5e92647249a682e429bf0e33a, type: 3}
+  - {fileID: -1111729462, guid: 3e909ee5e92647249a682e429bf0e33a, type: 3}
+  - {fileID: -841787164, guid: 3e909ee5e92647249a682e429bf0e33a, type: 3}
+  - {fileID: 288331194, guid: 3e909ee5e92647249a682e429bf0e33a, type: 3}
+  - {fileID: -413599710, guid: 3e909ee5e92647249a682e429bf0e33a, type: 3}
+  - {fileID: 952008284, guid: 3e909ee5e92647249a682e429bf0e33a, type: 3}
+  - {fileID: 38603066, guid: 3e909ee5e92647249a682e429bf0e33a, type: 3}
+  - {fileID: -518152313, guid: 3e909ee5e92647249a682e429bf0e33a, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - TileSetSecondScene_8
+  - TileSetSecondScene_9
+  - TileSetSecondScene_6
+  - TileSetSecondScene_7
+  - TileSetSecondScene_4
+  - TileSetSecondScene_5
+  - TileSetSecondScene_2
+  - TileSetSecondScene_3
+  - TileSetSecondScene_0
+  - TileSetSecondScene_1
+  - TileSetSecondScene_24
+  - TileSetSecondScene_25
+  - TileSetSecondScene_26
+  - TileSetSecondScene_27
+  - TileSetSecondScene_20
+  - TileSetSecondScene_21
+  - TileSetSecondScene_22
+  - TileSetSecondScene_23
+  - TileSetSecondScene_28
+  - TileSetSecondScene_19
+  - TileSetSecondScene_18
+  - TileSetSecondScene_15
+  - TileSetSecondScene_14
+  - TileSetSecondScene_17
+  - TileSetSecondScene_16
+  - TileSetSecondScene_11
+  - TileSetSecondScene_10
+  - TileSetSecondScene_13
+  - TileSetSecondScene_12
+  m_RenderDataMap: {}
+  m_Tag: New Sprite Atlas
+  m_IsVariant: 0
